@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script src="https://www.xpanda.info/echarts/echarts.min.js"></script>
+
+
+  <meta name="description" content="调校的基本步骤 决定需要测量的对象。 决定测量的方式。 测量。 从测量结果中，了解其含义。 以预期会提升测量结果的方式来修补系统配置。 测量，并与之前的测量结果比较。 回到第4步。  依照实际环境架设Tomcat。试着使用相同的硬件、操作系统、数据库等。越接近实际环境就越可能找到在实际系统中的瓶颈。在另一台机器上安装并配置负载测试用的软件。如果在运行Tomcat的同一台机器上运行，测试结果会不可靠">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomcat-性能调校">
+<meta property="og:url" content="http://yoursite.com/中间件/中间件/Tomcat-性能调校/index.html">
+<meta property="og:site_name" content="Paul Jiang&#39;s Blog">
+<meta property="og:description" content="调校的基本步骤 决定需要测量的对象。 决定测量的方式。 测量。 从测量结果中，了解其含义。 以预期会提升测量结果的方式来修补系统配置。 测量，并与之前的测量结果比较。 回到第4步。  依照实际环境架设Tomcat。试着使用相同的硬件、操作系统、数据库等。越接近实际环境就越可能找到在实际系统中的瓶颈。在另一台机器上安装并配置负载测试用的软件。如果在运行Tomcat的同一台机器上运行，测试结果会不可靠">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-17T06:07:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tomcat-性能调校">
+<meta name="twitter:description" content="调校的基本步骤 决定需要测量的对象。 决定测量的方式。 测量。 从测量结果中，了解其含义。 以预期会提升测量结果的方式来修补系统配置。 测量，并与之前的测量结果比较。 回到第4步。  依照实际环境架设Tomcat。试着使用相同的硬件、操作系统、数据库等。越接近实际环境就越可能找到在实际系统中的瓶颈。在另一台机器上安装并配置负载测试用的软件。如果在运行Tomcat的同一台机器上运行，测试结果会不可靠">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/中间件/中间件/Tomcat-性能调校/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Tomcat-性能调校 | Paul Jiang's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?491c3ccef3fc6b3b766f88ca5d0e4d62";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Paul Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/中间件/中间件/Tomcat-性能调校/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Tomcat-性能调校
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/中间件/" itemprop="url" rel="index"><span itemprop="name">中间件</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="调校的基本步骤"><a href="#调校的基本步骤" class="headerlink" title="调校的基本步骤"></a>调校的基本步骤</h2><ol>
+<li>决定需要测量的对象。</li>
+<li>决定测量的方式。</li>
+<li>测量。</li>
+<li>从测量结果中，了解其含义。</li>
+<li>以预期会提升测量结果的方式来修补系统配置。</li>
+<li>测量，并与之前的测量结果比较。</li>
+<li>回到第4步。</li>
+</ol>
+<p>依照实际环境架设Tomcat。试着使用相同的硬件、操作系统、数据库等。越接近实际环境就越可能找到在实际系统中的瓶颈。在另一台机器上安装并配置负载测试用的软件。如果在运行Tomcat的同一台机器上运行，测试结果会不可靠，有时会更糟糕。<br>让负责测试的机器与运行Tomcat的机器之间通信隔离。这样处理的原因在于在运行高流量的测试时，如果追加了不属于测试的网络流量，将导致这些测试结果变得不可靠。</p>
+<h2 id="测量Web服务器的性能"><a href="#测量Web服务器的性能" class="headerlink" title="测量Web服务器的性能"></a>测量Web服务器的性能</h2><ol>
+<li>负载测试客户端与服务器软件包是在同一台机器吗?</li>
+<li>在测试时，服务器端机器是否正在执行其他的程序?</li>
+<li>客户端与服务器是以千兆位的以太网络，还是100baseT、10baseT相连呢?如果负载测试客户端机器通过低于千兆以太网速度的网络信道链接到服务器端，那么网络链接会降低测试速度，从而改变测试结果。</li>
+<li>是屡次请求相同的网页，混合多种不同的并发请求，还是从庞大的网页清单中随机挑选呢?这能影响服务器及多线程缓存性能。</li>
+<li>测试客户端应按常规方式还是应该以突发方式发送请求呢?按基准调校来说，当您欲知道多快的服务器能完成请求时，应使测试客户端在请求之间不经暂停、快速连续地发送请求。</li>
+<li>运行的服务器是最终配置吗?根据基准调校的需要，应关闭所有调试工作，且还可能要关闭一些日志。</li>
+<li>HTTP客户端请求了图像还是仅请求了嵌入于其中的HTML页?</li>
+</ol>
+<h2 id="测试负载的工具"><a href="#测试负载的工具" class="headerlink" title="测试负载的工具"></a>测试负载的工具</h2><ol>
+<li>Jmeter<br>Jmeter提供了定制测试结果的最具报表特性的选项，是最能适应不同操作系统的工具，而且支持大部分功能。但是，出于某种原因，Jmeter不能像ab和siege所做的那样，每秒钟请求并完成那么多次HTTP请求。</li>
+<li>ab<br>是一个基准调校工具，所以一般不会把它用于递归测试。</li>
+<li>Siege<br>Siege是另一个很好的命令行Web负载测试工具。Siege支持多种不同的认证特性，并可执行基准测试、递归测试，还支持”Internet”模式测试(即尽可能仿真在Internet上Web应用程序进行交互的众多实际用户所产生的负载)。</li>
+</ol>
+<h2 id="ab-Apache基准调校工具"><a href="#ab-Apache基准调校工具" class="headerlink" title="ab:Apache基准调校工具"></a>ab:Apache基准调校工具</h2><p>在基准调校测试的时候，测试客户端请求HTTP的数量越少，测试客户端提供的测试结果就可能越不精确，因为在基准调校过程中，Java VM的资源回收暂停占用了整个测试时间的较高比重。运行HTTP请求的总数量越多，资源回收暂停变得意义更小，而且基准调校测试结果将更能显示Tomcat的整体性能。您最好运行至少100000个HTTP请求以执行基准调校测试。另外，您可以配置测试客户端，产生您喜欢的客户端线程数，但是，如果您将该线程数设置成超过Tomcat的conf/server.xml文件中提供的连接器(Connector)最大线程数(maxThread)，那么实际不会有太大的帮助。在默认的情况下将该线程数设置为150。如果您设置成测试者超过这一数字，而且在更多的线程中产生了比Tomcat拥有的接收线程数和处理线程数还要多的请求，就会影响性能，因为一些客户端请求线程将一直处于等待状态。最好是就保留在连接器的最下线程数(Connector的maxThread)设置下，如使用149的客户端线程。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab -k -n 100000 -c 149 http://127.0.0.1:8080/test</span><br></pre></td></tr></table></figure>
+<p>如果在ab命令行中删除-k，那么ab与Tomcat将不使用保持联机(keep-alive)链接，这样处理效率更低，因为它必须链接一个新的TCP包到Tomcat上，以执行每个HTTP请求。结果是每秒要处理的请求数更好了，而且Tomcat到客户端的吞吐量更小了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab -n 100000 -c 149 http://127.0.0.1:8080/test</span><br></pre></td></tr></table></figure>
+<h2 id="外部调校"><a href="#外部调校" class="headerlink" title="外部调校"></a>外部调校</h2><p>当您了解应用程序及Tomcat的实例对负载的响应情形后，就可以开始一些性能调校的处理了，这里有两种基本的调校方式：</p>
+<ul>
+<li>外部调校<br>涉及到非Tomcat组件的调校，如Tomcat所运行的操作系统，以及运行Tomcat的Java虚拟机器。<br>1.JVM的性能<br>不同厂商，不同版本之间的基准调校。如果选择Java 1.6,那么您可以对Sun的1.6、IBM的1.6和BEA的1.6版本的虚拟机进行基准调校。<br>通常，人们会设法修改JVM启动参数，以使Tomcat JVM能更快地为Web应用程序网页服务。这可以提供一些帮助，但通常不会在性能上提高较高百分比。其主要原因是这样处理不会太有用：JVM提供商在发布JDK之前就已进行过自身测试，寻找哪些设置会产生最佳性能，并让这些设置变成默认值。<br>JVM的堆栈内存(heap memory)分配除外。JVM提供商默认选择分配少量内存以启动JVM，且如果Java应用程序需要更多内存，那么在应用程序暂停时，JVM的heap会被重新分配为更大。为了避免这种暂停，可以设置最小heap大小与最大heap大小相等。那样处理的话，JVM将不会在运行的时候尝试扩展heap大小。只要设置JAVA_OPTS环境变量为类似于-Xms512M -Xmx512M之类的值。这意味着最大、最小heap都被设置为512MB。<br>2.操作系统的性能<br>您的服务器的操作系统是最适合于运行大型、高容量的Web服务器吗?OpenBSD的主要目标在安全防护，所以其核心中许多的限制都设得比较低，以防止各种形式的DOS攻击。Linux的目标是容易使用，所以其限制值会设得比较高。如果您执行任何版本的Microsoft Windows，请确定是Server。在非Server的版本中，终端用户的授权协议和程序代码都可能会限制用户数、可使用的网络连接数或其他限制。</li>
+<li>内部调校<br>与Tomcat本身有关的调校，包括改变配置文件中的设定值，以及修改Tomcat本身的源代码。</li>
+</ul>
+<ol>
+<li>停用DNS查询<br>DNS查询需要耗费网络资源，并涉及多部服务器的往返响应，而这些服务器可能位于遥远的地方，也可能尚未运行，因此导致延迟。</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">enableLookups</span>=<span class="string">"true"</span> <span class="attr">redirectPort</span>=<span class="string">"8443"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>只要将enableLookups的值”true”改成”false”，然后重新启动Tomcat。这样将不再使用DNS查询，也不会有延迟了。</p>
+<ol start="2">
+<li>调整线程数<br>另一种对应用程序之Connector性能控制的方法是控制其处理的进程数。Tomcat默认使用线程池以便对传入的请求提供快速响应。<br>通过更改Connector的minThreads与maxThreads的值，可以控制所分配的线程数。<br>minThreads的值应该大到能够处理最小负载量。即如果在低谷时刻，每秒可访问五次网页，而每次请求在一秒钟之内可完成，则预先分配5个线程就够了。随后在高峰时刻，则需要分配更多线程(最多到maxThreads所设定的数目)，为了防止流量暴增(或黑客的DoS攻击)让系统超出JVM的最大内存限制，而使服务器瘫痪，因此一定要设定上限。</li>
+<li>加快JSP的编译速度<br>当第一次访问JSP时，此JSP会转换成Java Servlet的源代码，然后必须再编译成Java的bytecode。用请求预编译JSP。</li>
+</ol>
+<h2 id="容量规划"><a href="#容量规划" class="headerlink" title="容量规划"></a>容量规划</h2><p>调校Tomcat在线服务器性能的另一重要部分就是容量规划。无论调校多少配置文件与进行多少测试，如果没有符合网站预期流量大小的硬件与带宽，实际上也帮不了忙。<br>通过研究及(或)预测网站必须处理的总网络流量，决定可接收的服务质量与寻找满足或超越服务器软件需求，来预测网站所需的计算机硬件、操作系统与带宽的活动。</p>
+<ol>
+<li>经验式的容量规划<br>经验式的容量规划师一种轻量级的规划方式，它不一定要很精确，但已足够让公司免于完全不做容量规划的后果。这种方法符合以前的业界经验产生的容量与性能趋势。例如，对于网站在高峰时有多少输出流量，您可以做最佳的预测，然后将该数字加倍。</li>
+<li>企业容量规划的目的是要更精确，因此也需要更久的时间。通常这会使用商业及的容量规划分析软件，以及反复的测试与模拟仿真。</li>
+</ol>
+<h2 id="Tomcat上的容量规划"><a href="#Tomcat上的容量规划" class="headerlink" title="Tomcat上的容量规划"></a>Tomcat上的容量规划</h2><ol>
+<li>服务器计算机硬件</li>
+<li>网络带宽</li>
+<li>服务器操作系统</li>
+</ol>
+<p>适用于Tomcat的各种容量规划的一般程序</p>
+<ol>
+<li>找出负载特性。</li>
+<li>分析性能的趋势。</li>
+<li>决定可接收服务的最低需求。例如，可能希望让用户最多等待20秒钟。</li>
+<li>决定要使用何种基础体系的资源，并在分段的环境下测试。</li>
+<li>如果第4步可以符合您的服务需求，就可以订购并部署更多的相同的机器，以作为生产用的服务器计算机。否则，请重复第4步，直到满足服务需求为止。</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/中间件/中间件/Zookeeper-安装/" rel="next" title="Zookeeper-安装">
+                <i class="fa fa-chevron-left"></i> Zookeeper-安装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/中间件/中间件/Redis-安装/" rel="prev" title="Redis-安装">
+                Redis-安装 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Paul Jiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">212</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yufeng.info/" title="褚霸" target="_blank">褚霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://agentzh.org/" title="章亦春" target="_blank">章亦春</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://martinfowler.com/" title="Martin Fowler" target="_blank">Martin Fowler</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#调校的基本步骤"><span class="nav-number">1.</span> <span class="nav-text">调校的基本步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测量Web服务器的性能"><span class="nav-number">2.</span> <span class="nav-text">测量Web服务器的性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试负载的工具"><span class="nav-number">3.</span> <span class="nav-text">测试负载的工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ab-Apache基准调校工具"><span class="nav-number">4.</span> <span class="nav-text">ab:Apache基准调校工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外部调校"><span class="nav-number">5.</span> <span class="nav-text">外部调校</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容量规划"><span class="nav-number">6.</span> <span class="nav-text">容量规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat上的容量规划"><span class="nav-number">7.</span> <span class="nav-text">Tomcat上的容量规划</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Paul Jiang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

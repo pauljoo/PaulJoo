@@ -1,0 +1,3204 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script src="https://www.xpanda.info/echarts/echarts.min.js"></script>
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Paul Jiang&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Paul Jiang&#39;s Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Paul Jiang&#39;s Blog">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/2/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Paul Jiang's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?491c3ccef3fc6b3b766f88ca5d0e4d62";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Paul Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/MapReduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/MapReduce/" itemprop="url">
+                  MapReduce
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1  问题的出现</p>
+<pre><code>多年来磁盘存储容量快速增加的同时，其访问速度-磁盘数据读取速度-却未能与时俱进。
+
+读取一个磁盘中所有的数据需要很长的时间，写甚至更慢。一个很简单的减少读取时间的办法是同时从多个磁盘上读取数据。试想，如果我们拥有100个磁盘，每个磁盘存储1%的数据，并行读取，那么不到两分钟就可以读取所有数据。
+
+MapReduce提出了一个编程模型，该模型将上述磁盘读写的问题进行抽象，并转换为对一个数据集(由键/值对组成)的计算
+</code></pre><p>2  MapReduce</p>
+<pre><code>MapReduce是一种可用于数据处理的编程模型。MapReduce程序本质上是并行运行的，因此可以将大规模的数据分析任务交给任何一个拥有足够多机器的运营商。MapReduce的优势在于处理大规模数据集。
+</code></pre><p>2.1  map阶段和reduce阶段</p>
+<pre><code>MapReduce任务过程被分为两个处理阶段：map阶段和reduce阶段。每个阶段都以键/值对作为输入和输出，并由程序员选择它们的类型。程序员还需具体定义两个函数:map函数和reduce函数。
+</code></pre><p>2.2  找出最高气温</p>
+<p>目标：根据原始数据找出每年的最高气温。</p>
+<p>原始数据：包含了一年中每天的气温记录。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输入</td>
+<td>原始数据</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>(1950, 0)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950,22)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950,-11)</td>
+</tr>
+<tr>
+<td></td>
+<td>-1,949,111</td>
+</tr>
+<tr>
+<td></td>
+<td>(1949,78)</td>
+</tr>
+<tr>
+<td>功能</td>
+<td>从原始数据中提取出有用数据组成键/值对</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>shuffle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输入</td>
+<td>(1950, 0)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950, 22)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950, -11)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1949, 111)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1949, 78)</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>(1949, [111,78])</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950, [0, 22, -11])</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>reduce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输入</td>
+<td>(1949, [111, 78])</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950, [0, 22, -11])</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>(1949, 111)</td>
+</tr>
+<tr>
+<td></td>
+<td>(1950, 22)</td>
+</tr>
+<tr>
+<td>功能</td>
+<td>遍历整个列表找出最大值</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/Markdown-数学公式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/Markdown-数学公式/" itemprop="url">
+                  Markdown-数学公式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>行内显示<code>$...$</code>定义</p>
+<p>单独显示<code>$$...$$</code>定义</p>
+<p>语句为<code>$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$</code></p>
+
+$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({text2jax: {inlineMath: [['$','$'], ['\\(', '\\)']]}});
+</script>
+
+<h2 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h2><ul>
+<li>若需要大写希腊字母，将命令首字母大写即可。</li>
+<li>若需要斜体希腊字母，将命令前加上var前缀即可。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>显示</th>
+<th>命令</th>
+<th>显示</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>α</td>
+<td>\alpha</td>
+<td>β</td>
+<td>\beta</td>
+</tr>
+<tr>
+<td>γ</td>
+<td>\gamma</td>
+<td>δ</td>
+<td>\delta</td>
+</tr>
+<tr>
+<td>ε</td>
+<td>\epsilon</td>
+<td>ζ</td>
+<td>\zeta</td>
+</tr>
+<tr>
+<td>η</td>
+<td>\eta</td>
+<td>θ</td>
+<td>\theta</td>
+</tr>
+<tr>
+<td>ι</td>
+<td>\iota</td>
+<td>κ</td>
+<td>\kappa</td>
+</tr>
+<tr>
+<td>λ</td>
+<td>\lambda</td>
+<td>μ</td>
+<td>\mu</td>
+</tr>
+<tr>
+<td>ν</td>
+<td>\nu</td>
+<td>ξ</td>
+<td>\xi</td>
+</tr>
+<tr>
+<td>π</td>
+<td>\pi</td>
+<td>ρ</td>
+<td>\rho</td>
+</tr>
+<tr>
+<td>σ</td>
+<td>\sigma</td>
+<td>τ</td>
+<td>\tau</td>
+</tr>
+<tr>
+<td>υ</td>
+<td>\upsilon</td>
+<td>φ</td>
+<td>\phi</td>
+</tr>
+<tr>
+<td>χ</td>
+<td>\chi</td>
+<td>ψ</td>
+<td>\psi</td>
+</tr>
+<tr>
+<td>ω</td>
+<td>\omega</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/Tomcat的性能调校/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/Tomcat的性能调校/" itemprop="url">
+                  Tomcat的性能调校
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###调校的基本步骤</p>
+<ol>
+<li>决定需要测量的对象。</li>
+<li>决定测量的方式。</li>
+<li>测量。</li>
+<li>从测量结果中，了解其含义。</li>
+<li>以预期会提升测量结果的方式来修补系统配置。</li>
+<li>测量，并与之前的测量结果比较。</li>
+<li>回到第4步。</li>
+</ol>
+<p>依照实际环境架设Tomcat。试着使用相同的硬件、操作系统、数据库等。越接近实际环境就越可能找到在实际系统中的瓶颈。在另一台机器上安装并配置负载测试用的软件。如果在运行Tomcat的同一台机器上运行，测试结果会不可靠，有时会更糟糕。<br>让负责测试的机器与运行Tomcat的机器之间通信隔离。这样处理的原因在于在运行高流量的测试时，如果追加了不属于测试的网络流量，将导致这些测试结果变得不可靠。</p>
+<p>###测量Web服务器的性能</p>
+<ol>
+<li>负载测试客户端与服务器软件包是在同一台机器吗?</li>
+<li>在测试时，服务器端机器是否正在执行其他的程序?</li>
+<li>客户端与服务器是以千兆位的以太网络，还是100baseT、10baseT相连呢?如果负载测试客户端机器通过低于千兆以太网速度的网络信道链接到服务器端，那么网络链接会降低测试速度，从而改变测试结果。</li>
+<li>是屡次请求相同的网页，混合多种不同的并发请求，还是从庞大的网页清单中随机挑选呢?这能影响服务器及多线程缓存性能。</li>
+<li>测试客户端应按常规方式还是应该以突发方式发送请求呢?按基准调校来说，当您欲知道多快的服务器能完成请求时，应使测试客户端在请求之间不经暂停、快速连续地发送请求。</li>
+<li>运行的服务器是最终配置吗?根据基准调校的需要，应关闭所有调试工作，且还可能要关闭一些日志。</li>
+<li>HTTP客户端请求了图像还是仅请求了嵌入于其中的HTML页?</li>
+</ol>
+<p>###测试负载的工具</p>
+<ol>
+<li>Jmeter<br>Jmeter提供了定制测试结果的最具报表特性的选项，是最能适应不同操作系统的工具，而且支持大部分功能。但是，出于某种原因，Jmeter不能像ab和siege所做的那样，每秒钟请求并完成那么多次HTTP请求。</li>
+<li>ab<br>是一个基准调校工具，所以一般不会把它用于递归测试。</li>
+<li>Siege<br>Siege是另一个很好的命令行Web负载测试工具。Siege支持多种不同的认证特性，并可执行基准测试、递归测试，还支持”Internet”模式测试(即尽可能仿真在Internet上Web应用程序进行交互的众多实际用户所产生的负载)。</li>
+</ol>
+<p>###ab:Apache基准调校工具<br>在基准调校测试的时候，测试客户端请求HTTP的数量越少，测试客户端提供的测试结果就可能越不精确，因为在基准调校过程中，Java VM的资源回收暂停占用了整个测试时间的较高比重。运行HTTP请求的总数量越多，资源回收暂停变得意义更小，而且基准调校测试结果将更能显示Tomcat的整体性能。您最好运行至少100000个HTTP请求以执行基准调校测试。另外，您可以配置测试客户端，产生您喜欢的客户端线程数，但是，如果您将该线程数设置成超过Tomcat的conf/server.xml文件中提供的连接器(Connector)最大线程数(maxThread)，那么实际不会有太大的帮助。在默认的情况下将该线程数设置为150。如果您设置成测试者超过这一数字，而且在更多的线程中产生了比Tomcat拥有的接收线程数和处理线程数还要多的请求，就会影响性能，因为一些客户端请求线程将一直处于等待状态。最好是就保留在连接器的最下线程数(Connector的maxThread)设置下，如使用149的客户端线程。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab -k -n 100000 -c 149 http://127.0.0.1:8080/test</span><br></pre></td></tr></table></figure>
+<p>如果在ab命令行中删除-k，那么ab与Tomcat将不使用保持联机(keep-alive)链接，这样处理效率更低，因为它必须链接一个新的TCP包到Tomcat上，以执行每个HTTP请求。结果是每秒要处理的请求数更好了，而且Tomcat到客户端的吞吐量更小了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab -n 100000 -c 149 http://127.0.0.1:8080/test</span><br></pre></td></tr></table></figure>
+<p>###外部调校<br>当您了解应用程序及Tomcat的实例对负载的响应情形后，就可以开始一些性能调校的处理了，这里有两种基本的调校方式：</p>
+<ul>
+<li>外部调校<br>涉及到非Tomcat组件的调校，如Tomcat所运行的操作系统，以及运行Tomcat的Java虚拟机器。<br>1.JVM的性能<br>不同厂商，不同版本之间的基准调校。如果选择Java 1.6,那么您可以对Sun的1.6、IBM的1.6和BEA的1.6版本的虚拟机进行基准调校。<br>通常，人们会设法修改JVM启动参数，以使Tomcat JVM能更快地为Web应用程序网页服务。这可以提供一些帮助，但通常不会在性能上提高较高百分比。其主要原因是这样处理不会太有用：JVM提供商在发布JDK之前就已进行过自身测试，寻找哪些设置会产生最佳性能，并让这些设置变成默认值。<br>JVM的堆栈内存(heap memory)分配除外。JVM提供商默认选择分配少量内存以启动JVM，且如果Java应用程序需要更多内存，那么在应用程序暂停时，JVM的heap会被重新分配为更大。为了避免这种暂停，可以设置最小heap大小与最大heap大小相等。那样处理的话，JVM将不会在运行的时候尝试扩展heap大小。只要设置JAVA_OPTS环境变量为类似于-Xms512M -Xmx512M之类的值。这意味着最大、最小heap都被设置为512MB。<br>2.操作系统的性能<br>您的服务器的操作系统是最适合于运行大型、高容量的Web服务器吗?OpenBSD的主要目标在安全防护，所以其核心中许多的限制都设得比较低，以防止各种形式的DOS攻击。Linux的目标是容易使用，所以其限制值会设得比较高。如果您执行任何版本的Microsoft Windows，请确定是Server。在非Server的版本中，终端用户的授权协议和程序代码都可能会限制用户数、可使用的网络连接数或其他限制。</li>
+<li>内部调校<br>与Tomcat本身有关的调校，包括改变配置文件中的设定值，以及修改Tomcat本身的源代码。</li>
+</ul>
+<ol>
+<li>停用DNS查询<br>DNS查询需要耗费网络资源，并涉及多部服务器的往返响应，而这些服务器可能位于遥远的地方，也可能尚未运行，因此导致延迟。</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">enableLookups</span>=<span class="string">"true"</span> <span class="attr">redirectPort</span>=<span class="string">"8443"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>只要将enableLookups的值”true”改成”false”，然后重新启动Tomcat。这样将不再使用DNS查询，也不会有延迟了。</p>
+<ol start="2">
+<li>调整线程数<br>另一种对应用程序之Connector性能控制的方法是控制其处理的进程数。Tomcat默认使用线程池以便对传入的请求提供快速响应。<br>通过更改Connector的minThreads与maxThreads的值，可以控制所分配的线程数。<br>minThreads的值应该大到能够处理最小负载量。即如果在低谷时刻，每秒可访问五次网页，而每次请求在一秒钟之内可完成，则预先分配5个线程就够了。随后在高峰时刻，则需要分配更多线程(最多到maxThreads所设定的数目)，为了防止流量暴增(或黑客的DoS攻击)让系统超出JVM的最大内存限制，而使服务器瘫痪，因此一定要设定上限。</li>
+<li>加快JSP的编译速度<br>当第一次访问JSP时，此JSP会转换成Java Servlet的源代码，然后必须再编译成Java的bytecode。用请求预编译JSP。<br>###容量规划<br>调校Tomcat在线服务器性能的另一重要部分就是容量规划。无论调校多少配置文件与进行多少测试，如果没有符合网站预期流量大小的硬件与带宽，实际上也帮不了忙。<br>通过研究及(或)预测网站必须处理的总网络流量，决定可接收的服务质量与寻找满足或超越服务器软件需求，来预测网站所需的计算机硬件、操作系统与带宽的活动。</li>
+<li>经验式的容量规划<br>经验式的容量规划师一种轻量级的规划方式，它不一定要很精确，但已足够让公司免于完全不做容量规划的后果。这种方法符合以前的业界经验产生的容量与性能趋势。例如，对于网站在高峰时有多少输出流量，您可以做最佳的预测，然后将该数字加倍。</li>
+<li>企业容量规划的目的是要更精确，因此也需要更久的时间。通常这会使用商业及的容量规划分析软件，以及反复的测试与模拟仿真。</li>
+</ol>
+<p>###Tomcat上的容量规划</p>
+<ol>
+<li>服务器计算机硬件</li>
+<li>网络带宽</li>
+<li>服务器操作系统</li>
+</ol>
+<p>适用于Tomcat的各种容量规划的一般程序</p>
+<ol>
+<li>找出负载特性。</li>
+<li>分析性能的趋势。</li>
+<li>决定可接收服务的最低需求。例如，可能希望让用户最多等待20秒钟。</li>
+<li>决定要使用何种基础体系的资源，并在分段的环境下测试。</li>
+<li>如果第4步可以符合您的服务需求，就可以订购并部署更多的相同的机器，以作为生产用的服务器计算机。否则，请重复第4步，直到满足服务需求为止。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/emacs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/emacs/" itemprop="url">
+                  emacs
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Emacs不仅仅是一个编辑器，他是一个整合环境，或可称它为集成开发环境，这些功能如让使用者置身于全功能的操作系统中。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>启动：emacs [filename]<br>退出：C-x C-c<br>挂起：C-z</p>
+<h2 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h2><p>C-chr表示当输入字符chr时按住CONTROL键。因此C-f就表示：按住CONTROL键再输入f。<br>M-chr表示当输入字符chr时按住META（或EDIT或ALT）键。如果你的键盘上没有META、EDIT或ALT键，用下述方法也等效：先按一下ESC键然后放开，再输入chr。我们用ESC来表示ESC键。</p>
+<h2 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h2><p>主(major)模式:M-x fundamental-mode<br>辅助(minor)模式:辅模式并不能替代主模式，而是提供一些辅助的功能。每个辅模式都可以独立地开启和关闭，跟其它辅模式无关，跟主模式也无关。<br>切换：C-x o<br>关闭：C-x 1</p>
+<h2 id="窗格"><a href="#窗格" class="headerlink" title="窗格"></a>窗格</h2><p>新窗格：C-x 5 2<br>切换：C-x 5 o<br>删除当前窗格：C-x 5 0</p>
+<h2 id="菜单"><a href="#菜单" class="headerlink" title="菜单"></a>菜单</h2><p>显示和隐藏：M-x menu-bar-mode<br>调用：F10或者M-`</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>.emacs文件包含LISP函数调用表达式，因此它对语法非常挑剔。</p>
+<h2 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h2><p>开始录制：C-x (<br>结束录制：C-x )<br>执行最后一条宏：C-x e</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/vim/" itemprop="url">
+                  vim
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mv ~/.vimrc ~/.vimrcbak</span><br><span class="line">mv ~/.vim ~/.vimbak</span><br><span class="line">git clone https://github.com/pauljoo/vim.git</span><br><span class="line">mv vim/.vimrc vim/.vim ~/</span><br></pre></td></tr></table></figure>
+<ol>
+<li>管理插件的插件</li>
+<li>管理窗口和buffer</li>
+<li>语法增强</li>
+<li>代码补全</li>
+</ol>
+<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><h3 id="pathogen"><a href="#pathogen" class="headerlink" title="pathogen"></a>pathogen</h3><p>一个管理插件的插件</p>
+<h4 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h4><p><a href="https://github.com/tpope/vim-pathogen" target="_blank" rel="noopener">https://github.com/tpope/vim-pathogen</a></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">execute pathogen#infect()</span><br><span class="line">syntax on</span><br><span class="line">filetype plugin indent on</span><br></pre></td></tr></table></figure>
+<h3 id="auto-pairs"><a href="#auto-pairs" class="headerlink" title="auto-pairs"></a>auto-pairs</h3><p>自动匹配括号、引号等</p>
+<h4 id="项目地址-1"><a href="#项目地址-1" class="headerlink" title="项目地址"></a>项目地址</h4><p><a href="https://github.com/jiangmiao/auto-pairs" target="_blank" rel="noopener">https://github.com/jiangmiao/auto-pairs</a></p>
+<h3 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h3><p>显示目录树</p>
+<h4 id="项目地址-2"><a href="#项目地址-2" class="headerlink" title="项目地址"></a>项目地址</h4><p><a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="noopener">https://github.com/scrooloose/nerdtree</a></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><ol>
+<li>命令行模式下输入:NERDTree</li>
+<li>为了方便打开NERDTree，我们可以设置快捷键，打开~/.vimrc，插入如下一行<br>map <c-n> :NERDTree<cr><br>这样，当打开vim时，只要输入ctrl+n即可打开NERDTree</cr></c-n></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">文件相关操作</span><br><span class="line">o  : 在光标所在的上一个窗口打开文件，并将光标置于新打开的窗口</span><br><span class="line">go : 预览文件，光标停留在NERDTree窗口中</span><br><span class="line">t  : 在新标签中打开文件并激活</span><br><span class="line">gt : 在新标签打开文件，光标留在NERDTree窗口中</span><br><span class="line">i  : 水平分割打开文件</span><br><span class="line">gi : 水平分割预览</span><br><span class="line">s  : 垂直分割打开文件</span><br><span class="line">gs : 垂直分割预览</span><br><span class="line">目录树相关操作</span><br><span class="line">o  : 展开/关闭目录</span><br><span class="line">O  : 递归展开目录。慎用，如果目录层级多，打开会很慢</span><br><span class="line">x  : 关闭父目录</span><br><span class="line">C  : 切换光标所在目录为根目录</span><br><span class="line">u  : 切换目录树的根目录为上层目录</span><br><span class="line">U  : 切换目录树的根目录为上层目录，并保持旧的目录树的状态</span><br><span class="line">r  : 刷新当前目录</span><br><span class="line">R  : 刷新当前根目录（这个在新加入文件后会用到）</span><br><span class="line">cd : 切换vim工作目录为光标所在目录（命令模式下:pwd可查看当前工作目录）</span><br></pre></td></tr></table></figure>
+<h3 id="MiniBufExplorer"><a href="#MiniBufExplorer" class="headerlink" title="MiniBufExplorer"></a>MiniBufExplorer</h3><p>显示已打开的buffer</p>
+<h4 id="项目地址-3"><a href="#项目地址-3" class="headerlink" title="项目地址"></a>项目地址</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.vim/bundle/minibufexplorer/plugin &amp;&amp; wget "http://www.vim.org/scripts/download_script.php?src_id=3640" -O ~/.vim/bundle/minibufexplorer/plugin/minibufexpl.vim</span><br></pre></td></tr></table></figure>
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>命令行模式下通过:vsp filename打开另一个文件</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="ctags"><a href="#ctags" class="headerlink" title="ctags"></a>ctags</h3><p>是用来对代码建索引，方便查找的，有些Linux版本是自带ctags的，如果没有，按如下方式安装</p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ctags</span><br></pre></td></tr></table></figure>
+<h3 id="taglist"><a href="#taglist" class="headerlink" title="taglist"></a>taglist</h3><p>taglist是vim的一个插件，可以将代码内的函数、变量等按规律列出来，方便查找</p>
+<h4 id="项目地址-4"><a href="#项目地址-4" class="headerlink" title="项目地址"></a>项目地址</h4><p><a href="http://www.vim.org/scripts/script.php?script_id=273" target="_blank" rel="noopener">http://www.vim.org/scripts/script.php?script_id=273</a> </p>
+<h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">taglist</span><br><span class="line">|-- doc</span><br><span class="line">|   |-- taglist.txt</span><br><span class="line">|-- plugin</span><br><span class="line">  |-- taglist.viml</span><br></pre></td></tr></table></figure>
+<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><p>打开~/.vimrc，输入如下内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let Tlist_Show_One_File=1    " 只展示一个文件的taglist</span><br><span class="line">let Tlist_Exit_OnlyWindow=1  " 当taglist是最后以个窗口时自动退出</span><br><span class="line">let Tlist_Use_Right_Window=1 " 在右边显示taglist窗口</span><br><span class="line">let Tlist_Sort_Type="name"   " tag按名字排序</span><br></pre></td></tr></table></figure></p>
+<h3 id="omnicppcomplete"><a href="#omnicppcomplete" class="headerlink" title="omnicppcomplete"></a>omnicppcomplete</h3><p>这是一个对C++进行语法补全的插件，可以对函数、命名空间、类成员等进行补全，使用起来和绝大多数IDE差不多，不一样的是IDE为你做了很多你不知道的事情，而omni补全需要依赖tags文件，需要你用ctags命令自己生成</p>
+<h4 id="项目地址-5"><a href="#项目地址-5" class="headerlink" title="项目地址"></a>项目地址</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.vim/bundle &amp;&amp; wget "http://www.vim.org/scripts/download_script.php?src_id=7722" -O omnicppcomplete.zip &amp;&amp; unzip omnicppcomplete.zip -d omnicppcomplete</span><br></pre></td></tr></table></figure>
+<h4 id="目录结构-1"><a href="#目录结构-1" class="headerlink" title="目录结构"></a>目录结构</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">├── after</span><br><span class="line">│   └── ftplugin</span><br><span class="line">│       ├── cpp.vim</span><br><span class="line">│       └── c.vim</span><br><span class="line">├── autoload</span><br><span class="line">│   └── omni</span><br><span class="line">│       ├── common</span><br><span class="line">│       │   ├── debug.vim</span><br><span class="line">│       │   └── utils.vim</span><br><span class="line">│       └── cpp</span><br><span class="line">│           ├── complete.vim</span><br><span class="line">│           ├── includes.vim</span><br><span class="line">│           ├── items.vim</span><br><span class="line">│           ├── maycomplete.vim</span><br><span class="line">│           ├── namespaces.vim</span><br><span class="line">│           ├── settings.vim</span><br><span class="line">│           ├── tokenizer.vim</span><br><span class="line">│           └── utils.vim</span><br><span class="line">└── doc</span><br><span class="line">    └── omnicppcomplete.txt</span><br></pre></td></tr></table></figure>
+<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>打开~/.vimrc，输入如下内容<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">filetype plugin indent on</span><br><span class="line">set completeopt=longest,menu</span><br><span class="line">let OmniCpp_NamespaceSearch = 2     " search namespaces in the current buffer   and in included files</span><br><span class="line">let OmniCpp_ShowPrototypeInAbbr = 1 " 显示函数参数列表</span><br><span class="line">let OmniCpp_MayCompleteScope = 1    " 输入 :: 后自动补全</span><br><span class="line">let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]</span><br></pre></td></tr></table></figure></p>
+<h4 id="手动建立tags文件"><a href="#手动建立tags文件" class="headerlink" title="手动建立tags文件"></a>手动建立tags文件</h4><p>omni插件的补全是依赖于tags文件的<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++</span><br></pre></td></tr></table></figure></p>
+<h3 id="SuperTab"><a href="#SuperTab" class="headerlink" title="SuperTab"></a>SuperTab</h3><p>你想要补全变量名或函数名只需按一下TAB键即可，出现候选窗口之后也可以用TAB键进行选择</p>
+<h4 id="项目地址-6"><a href="#项目地址-6" class="headerlink" title="项目地址"></a>项目地址</h4><p><a href="https://github.com/ervandew/supertab" target="_blank" rel="noopener">https://github.com/ervandew/supertab</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/代码整洁/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/代码整洁/" itemprop="url">
+                  代码整洁
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>“如果每个例程都让你感到深合己意，那就是整洁代码”-沃德</p>
+</blockquote>
+<p>SRP原则(单一权责原则):只有一个修改它的理由。</p>
+<p>OCP原则(开放闭合原则):对扩展开放，对修改闭合。</p>
+<p>要确保函数只做一件事，函数中的语句都要在同一抽象层级上。</p>
+<p>如果函数看来需要两个/三个或三个以上的参数，就说明其中一些参数应该封装为类了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/期望、方差、协方差和矩/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/期望、方差、协方差和矩/" itemprop="url">
+                  期望、方差、协方差和矩
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
+<h2 id="期望E"><a href="#期望E" class="headerlink" title="期望E"></a>期望E</h2><h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><p>所有可能取值的一个加权平均</p>
+<blockquote>
+<p>$E[X]=\sum_{x:p(x)&gt;0}xp(x)$</p>
+</blockquote>
+<h3 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h3><blockquote>
+<p>$E[X] = \int_{-\infty}^{\infty}xf(x)dx$</p>
+</blockquote>
+<h2 id="方差Var"><a href="#方差Var" class="headerlink" title="方差Var"></a>方差Var</h2><p>X与其期望的差的平方的期望</p>
+<blockquote>
+<p>$Var(X) = E[(X-\mu)^2] = E[X^2] - (E[X])^2$</p>
+</blockquote>
+<h2 id="协方差Cov"><a href="#协方差Cov" class="headerlink" title="协方差Cov"></a>协方差Cov</h2><p>期望和方差可以给出单个随机变量的信息，两个随机变量的协方差可指示两个随机变量之间的关系</p>
+<blockquote>
+<p>$Cov(X, Y) = E[(X-E(X))(Y-E(Y))]=E[XY]-E[X]E[Y]$</p>
+</blockquote>
+<h2 id="相关系数"><a href="#相关系数" class="headerlink" title="相关系数"></a>相关系数</h2><p>设X, Y为两个随机变量，假定Var(X)和Var(Y)均大于0，则</p>
+<blockquote>
+<p>$\rho(X, Y) = \frac{Cov(X, Y)}{\sqrt{Var(X)Var(Y)}}$<br>称为X和Y的相关系数</p>
+</blockquote>
+<h2 id="矩"><a href="#矩" class="headerlink" title="矩"></a>矩</h2><blockquote>
+<p>数学期望和方差可以纳入到一个更一般的概念范畴中，那就是随机变量的矩。<br>设X为随机变量，k为正整数，如果$E(X^k)$存在，则称$E(X^k)$为X的k阶原点矩<br>如果$E[(X-E(X))^k]$存在，则称$E[(X-E(X))^k]$为X的k阶中心矩<br>显然，一阶原点矩就是数学期望，二阶中心矩就是方差</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/版本控制/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/版本控制/" itemprop="url">
+                  版本控制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="版本号"><a href="#版本号" class="headerlink" title="版本号"></a>版本号</h2><ol>
+<li>主版本号<br>就API修改而言，主版本号的改变表明添加了大量向后兼容的新特性，或者向后兼容性遭到了破坏。总之，API主版本号的增长向客户表明API进行了重大修改。</li>
+<li>次版本号<br>每当添加较小的特性或修正重大错误时这个数会增大。次版本号的修改通常不应该涉及任何不兼容的API修改。用户应该能够升级到新的次版本，而不必对自己的软件做任何改动。不过一些新的特性可能被添加到API中。</li>
+<li>补丁版本号<br>补丁版本号的变更应该暗示现行的API接口没有修改，也就是只有API的行为有所改变。</li>
+</ol>
+<h2 id="提供API的版本信息"><a href="#提供API的版本信息" class="headerlink" title="提供API的版本信息"></a>提供API的版本信息</h2><p>API的版本信息应该可以在代码中访问，以便允许客户以API版本号为条件编写代码。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//version.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> API_MAJOR 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> API_MINOR 2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> API_PATCH 0</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Version</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetMajor</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetMinor</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetPatch</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">GetVersion</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">IsAtLeast</span><span class="params">(<span class="keyword">int</span> major, <span class="keyword">int</span> minor, <span class="keyword">int</span> patch)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">HasFeature</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;name)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="软件分支策略"><a href="#软件分支策略" class="headerlink" title="软件分支策略"></a>软件分支策略</h2><p>大型软件项目通常会涉及某种形式的分支策略，这就需要同步开发、固定及维护不同的软件发布版本。</p>
+<h3 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h3><p>每个软件项目都需要一条”主干”代码路线，它是项目源代码的持久存储库。对于每次版本发布，或者必须与下次发布区分的开发工作，可由主干代码派发出分支。这个模型支持并行开发，可以将新特性加入项目，同时锁定对即将发布版本的修改，使现存的特性集保持稳定。</p>
+<blockquote>
+<p>只在必要时再分支，尽量延迟创建分支的时间。尽量使固体不过分支代码路线而非冻结代码路线。尽早且频繁地合并分支。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/编程珠玑-随机抽样/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/编程珠玑-随机抽样/" itemprop="url">
+                  编程珠玑-随机抽样
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>该算法按顺序考虑整数0,1,2,…,n-1，并通过合适的随机测试选择每个元素。通过按序访问整数，就能保证输出结果是有序的。</p>
+<p>下面通过m=2和n=5这个例子来理解选择条件。选择第一个整数0，概率为2/5，程序通过下面的语句来实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Random random = <span class="keyword">new</span> Random();</span><br><span class="line"><span class="keyword">int</span> n = <span class="number">100</span>;<span class="comment">//总的样本数</span></span><br><span class="line"><span class="keyword">int</span> m = <span class="number">50</span>;<span class="comment">//抽取的样本数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> select = m;</span><br><span class="line"><span class="keyword">int</span> remaining = n;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>((random.nextInt() % remaining) &lt; select &amp;&amp; select &gt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(i);</span><br><span class="line">		select--;</span><br><span class="line">	&#125;</span><br><span class="line">	remain++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/其他/通过源代码安装nagios/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/其他/其他/通过源代码安装nagios/" itemprop="url">
+                  通过源代码安装nagios
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-30 16:55:58" itemprop="dateCreated datePublished" datetime="2018-12-30T16:55:58+00:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>目的</p>
+<p>这个文档描述了如何在CentOS和Ubuntu服务器上通过源代码安装Nagios Core和Nagios Plugins</p>
+<p>目标读者</p>
+<p>所有想要通过源代码安装Nagios Core</p>
+<p>先决条件</p>
+<p>Ubuntu</p>
+<p>执行这个文档里面的所有步骤使用root权限，下面的命令可以切换到root shell。<br>sudo -i</p>
+<p>在不同的平台安装Nagios，对于依赖包的要求会有所不同。<br>RHEL/CentOS:<br>yum install -y wget httpd php gcc glibc glibc-common gd gd-devel make net-snmp</p>
+<p>Ubuntu:<br>sudo apt-get install wget build-essential apache2 php5-gd libgd2-xpm libgd2-xpm-dev libapache2-modphp5</p>
+<p>下载Nagios Core和Nagios Plugins Tarballs</p>
+<p>所有系统，在你的终端中运行以下命令:<br>cd /tmp<br>wget <a href="http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.4.tar.gz" target="_blank" rel="noopener">http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.4.tar.gz</a><br>wget <a href="http://nagios-plugins.org/download/nagios-plugins-2.0.tar.gz" target="_blank" rel="noopener">http://nagios-plugins.org/download/nagios-plugins-2.0.tar.gz</a><br>这里会下载Nagios Core和它所要求的插件</p>
+<p>增加Nagios用户和组</p>
+<p>为了Nagios进程的运行增加适当的用户和组<br>useradd nagios<br>groupadd nagcmd<br>usermod -a -G nagcmd nagios</p>
+<p>Nagios Core安装</p>
+<p>tar zxvf nagios-4.0.4.tar.gz<br>tar zxvf nagios-plugins-2.0.tar.gz<br>切换到Nagios目录然后安装package：<br>cd nagios-4.0.4</p>
+<p>RHEL/CentOS:<br>./configure –with-command-group=nagcmd<br>Ubuntu:<br>./configure –with-nagios-group=nagios –with-command-group=nagcmd -–with-mail=/usr/bin/sendmail</p>
+<p>所有系统:<br>make all<br>make install<br>make install-init<br>make install-config<br>make install-commandmode<br>make install-webconf<br>cp -R contrib/eventhandlers/ /usr/local/nagios/libexec/<br>chown -R nagios:nagios /usr/local/nagios/libexec/eventhandlers<br>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg<br>/etc/init.d/nagios start</p>
+<p>RHEL/CentOS:<br>/etc/init.d/httpd start</p>
+<p>创建一个默认用户用于Web访问</p>
+<p>htpasswd –c /usr/local/nagios/etc/htpasswd.users nagiosadmin</p>
+<p>Nagios Plugin安装</p>
+<p>cd /tmp/nagios-plugins-2.0<br>./configure –with-nagios-user=nagios –with-nagios-group=nagios<br>make<br>make install</p>
+<p>Nagios Service设置</p>
+<p>下面的命令会注册系统启动时运行Nagios守护进程<br>chkconfig –add nagios<br>chkconfig –level 35 nagios on<br>chkconfig –add httpd<br>chkconfig –level 35 httpd on</p>
+<p>Ubuntu:<br>ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios<br>Nagios Web界面</p>
+<p>在安装正确的步骤安装后，你可以通过web浏览器访问Nagios Core。<br>使用一下：<br>http://&lt;your.nagios.server.ip&gt;/nagios<br>使用你在向htpasswd.users文件里增加nagiosadmin用户时你选择的凭证。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Paul Jiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">212</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yufeng.info/" title="褚霸" target="_blank">褚霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://agentzh.org/" title="章亦春" target="_blank">章亦春</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://martinfowler.com/" title="Martin Fowler" target="_blank">Martin Fowler</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Paul Jiang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

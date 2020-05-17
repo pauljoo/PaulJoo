@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script src="https://www.xpanda.info/echarts/echarts.min.js"></script>
+
+
+  <meta name="description" content="质量属性场景质量属性场景是一种面向特定的质量属性的需求。它由以下6部分组成：  刺激源：某个生成该刺激的实体（人、计算机系统或任何其他激励器）。 刺激：该刺激是当刺激到达系统时需要考虑的条件。 环境：该刺激在某些条件内发生。当刺激发生时，系统可能处于过载，或者正在运行，也可能是其他情况。 制品：某个制品被刺激。这可能是整个系统，也可能是系统的一部分。 响应：该响应是在刺激到达后所采取的行动。 响应">
+<meta name="keywords" content="软件构架实践">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件构架实践-质量属性">
+<meta property="og:url" content="http://yoursite.com/架构/架构/软件构架实践-质量属性/index.html">
+<meta property="og:site_name" content="Paul Jiang&#39;s Blog">
+<meta property="og:description" content="质量属性场景质量属性场景是一种面向特定的质量属性的需求。它由以下6部分组成：  刺激源：某个生成该刺激的实体（人、计算机系统或任何其他激励器）。 刺激：该刺激是当刺激到达系统时需要考虑的条件。 环境：该刺激在某些条件内发生。当刺激发生时，系统可能处于过载，或者正在运行，也可能是其他情况。 制品：某个制品被刺激。这可能是整个系统，也可能是系统的一部分。 响应：该响应是在刺激到达后所采取的行动。 响应">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/架构/架构/软件构架实践-质量属性/质量属性场景的6个部分.jpg">
+<meta property="og:image" content="http://yoursite.com/架构/架构/软件构架实践-质量属性/可用性的一般场景.jpg">
+<meta property="og:image" content="http://yoursite.com/架构/架构/软件构架实践-质量属性/可用性的场景样例.jpg">
+<meta property="og:updated_time" content="2020-05-17T06:07:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="软件构架实践-质量属性">
+<meta name="twitter:description" content="质量属性场景质量属性场景是一种面向特定的质量属性的需求。它由以下6部分组成：  刺激源：某个生成该刺激的实体（人、计算机系统或任何其他激励器）。 刺激：该刺激是当刺激到达系统时需要考虑的条件。 环境：该刺激在某些条件内发生。当刺激发生时，系统可能处于过载，或者正在运行，也可能是其他情况。 制品：某个制品被刺激。这可能是整个系统，也可能是系统的一部分。 响应：该响应是在刺激到达后所采取的行动。 响应">
+<meta name="twitter:image" content="http://yoursite.com/架构/架构/软件构架实践-质量属性/质量属性场景的6个部分.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/架构/架构/软件构架实践-质量属性/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>软件构架实践-质量属性 | Paul Jiang's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?491c3ccef3fc6b3b766f88ca5d0e4d62";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Paul Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/软件构架实践-质量属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">软件构架实践-质量属性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="质量属性场景"><a href="#质量属性场景" class="headerlink" title="质量属性场景"></a>质量属性场景</h2><p>质量属性场景是一种面向特定的质量属性的需求。它由以下6部分组成：</p>
+<ul>
+<li>刺激源：某个生成该刺激的实体（人、计算机系统或任何其他激励器）。</li>
+<li>刺激：该刺激是当刺激到达系统时需要考虑的条件。</li>
+<li>环境：该刺激在某些条件内发生。当刺激发生时，系统可能处于过载，或者正在运行，也可能是其他情况。</li>
+<li>制品：某个制品被刺激。这可能是整个系统，也可能是系统的一部分。</li>
+<li>响应：该响应是在刺激到达后所采取的行动。</li>
+<li>响应度量：当响应发生时，应该能够以某种方式对其进行度量，以对需求进行测试。</li>
+</ul>
+<p>我们将一般的质量属性场景与具体的质量属性场景区分开来，前者是指那些独立于系统，很可能适合任何系统的场景，后者是指适合正在考虑的某个特定系统的场景。</p>
+<img src="/架构/架构/软件构架实践-质量属性/质量属性场景的6个部分.jpg" title="质量属性场景的6个部分">
+<h3 id="可用性的一般场景生成"><a href="#可用性的一般场景生成" class="headerlink" title="可用性的一般场景生成"></a>可用性的一般场景生成</h3><table>
+<thead>
+<tr>
+<th>场景的部分</th>
+<th>可能的值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>源</td>
+<td>系统内部、系统外部</td>
+</tr>
+<tr>
+<td>刺激</td>
+<td>错误：疏忽、崩溃、时间、响应</td>
+</tr>
+<tr>
+<td>制品</td>
+<td>系统的处理器、通信通道、持久存储器、进程</td>
+</tr>
+<tr>
+<td>环境</td>
+<td>正常操作、降级模式</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>系统应该检测时间，并进行如下一个或多个活动：将其记录下来，通知适当的各方，根据已定义的规则禁止导致错误或故障的事件源，在一段预先指定的时间间隔内不可用。</td>
+</tr>
+<tr>
+<td>响应度量</td>
+<td>系统必须可用的时间间隔；可用时间；系统可以在降级模式下运行的时间间隔；修复时间；</td>
+</tr>
+</tbody>
+</table>
+<h3 id="可用性的一般场景"><a href="#可用性的一般场景" class="headerlink" title="可用性的一般场景"></a>可用性的一般场景</h3><img src="/架构/架构/软件构架实践-质量属性/可用性的一般场景.jpg" title="可用性的一般场景">
+<h3 id="可用性的场景样例"><a href="#可用性的场景样例" class="headerlink" title="可用性的场景样例"></a>可用性的场景样例</h3><img src="/架构/架构/软件构架实践-质量属性/可用性的场景样例.jpg" title="可用性的场景样例">
+<h2 id="系统质量属性"><a href="#系统质量属性" class="headerlink" title="系统质量属性"></a>系统质量属性</h2><ol>
+<li>可用性</li>
+</ol>
+<p>可用性所关注的方面包括：如何检测系统故障，系统故障发生的频度，出现故障时会发生什么情况，允许系统有多长时间非正常运行，什么时候可以安全的出现故障，如何防止故障的发生以及发生故障时要求进行哪种通知。</p>
+<ol start="2">
+<li>可修改性</li>
+</ol>
+<p>可修改性是有关变更的成本问题，它提出了两个关注点。</p>
+<ul>
+<li>可以修改什么?可以修改系统的任何方面，最常见的就是系统计算的功能、系统存在的平台、系统运行的环境、系统所展示的质量属性以及其容量。</li>
+<li>任何进行变更以及由谁进行变更?可以在编译期间、构建期间、配置设置迁建或者执行期间改变实现。变更还可以由开发人员、最终用户或系统管理员进行。</li>
+</ul>
+<ol start="3">
+<li>性能</li>
+</ol>
+<p>性能与时间有关。可以用等待时间、处理期限、系统吞吐量、响应抖动、由于系统太忙因而无法做出响应所导致的未处理事件的数量，以及因系统太忙所丢失的数据。</p>
+<ol start="4">
+<li>安全性</li>
+</ol>
+<p>可以把安全性刻画为一个提供认可、机密性、完整性、保证、可用性和审核的系统。</p>
+<ul>
+<li>认可：就是交易不能被交易的任何一方拒绝的属性。这意味着如果你通过Internet订购了某个项目的话，就不能否认。</li>
+<li>机密性：就是未经授权不能访问数据或服务的属性。</li>
+<li>完整性：根据计划来提交数据或服务的属性。自从老师给你分配登记后，等级就没有改变过。</li>
+<li>保证：交易的各方是所声称的人的属性。当客户发送一个信用卡卡号到Internet商家时，该商家正是客户所认为的商家。</li>
+<li>可用性：系统可用于合法用户的属性。拒绝服务供给不会阻碍你订购。</li>
+<li>审核：系统在其内部跟踪活动的属性，跟踪的级别足以对活动进行重构。</li>
+</ul>
+<ol start="5">
+<li>可测试性</li>
+</ol>
+<p>可测试性的响应度量是测试在发现缺陷方面的效率，以及要想达到某个期望的覆盖范围，需要用多长时间进行测试。</p>
+<ol start="6">
+<li>易用性</li>
+</ol>
+<p>易用性关注的是对用户来说完成某个期望任务的容易程度和系统所提供的用户支持的种类。</p>
+<ul>
+<li>学习系统的特性：如果用户不熟悉某个特定的系统或该系统的某一特定方面，那么系统可以如何使学习任务变得更容易。</li>
+<li>有效的使用系统：系统如何提高用户的操作效率。</li>
+<li>将错误的影响降到最低：系统怎样使用户所犯的错误造成的影响最小。</li>
+<li>使系统适应用户的需要：系统如何使用户的任务变得更轻松。</li>
+<li>提高自信和满意度：系统如何使用户却行采取了正确的行动。</li>
+</ul>
+<h2 id="其他系统质量属性"><a href="#其他系统质量属性" class="headerlink" title="其他系统质量属性"></a>其他系统质量属性</h2><p>在其他资料中，还可以发现大量的其他属性。比如可扩充性，可移植性等等。在引用这些质量属性的时候，通过对一般场景的6个部分进行描述即可。</p>
+<h2 id="商业质量属性"><a href="#商业质量属性" class="headerlink" title="商业质量属性"></a>商业质量属性</h2><ol>
+<li>上市时间</li>
+<li>成本和收益</li>
+<li>所希望的系统生命期的长短</li>
+<li>目标市场</li>
+<li>推出计划</li>
+<li>与老系统的集成</li>
+</ol>
+<h2 id="构架质量属性"><a href="#构架质量属性" class="headerlink" title="构架质量属性"></a>构架质量属性</h2><ol>
+<li>概念完整性：在各个层次上统一系统设计的根本指导思想。</li>
+<li>正确性和完整性：构架能够满足系统的各种需求及运行时的资源要求的必要条件。</li>
+<li>可构建性：保证能够由指定的开发小组在规定的时间里及时开发系统，并允许在开发过程中做某些更改的架构属性。</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/软件构架实践/" rel="tag"># 软件构架实践</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/架构/架构/软件构架实践-构架商业周期/" rel="next" title="软件构架实践-构架商业周期">
+                <i class="fa fa-chevron-left"></i> 软件构架实践-构架商业周期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/架构/架构/面向模式的软件架构-Blackboard模式/" rel="prev" title="面向模式的软件架构-Blackboard模式">
+                面向模式的软件架构-Blackboard模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Paul Jiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">212</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yufeng.info/" title="褚霸" target="_blank">褚霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://agentzh.org/" title="章亦春" target="_blank">章亦春</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://martinfowler.com/" title="Martin Fowler" target="_blank">Martin Fowler</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#质量属性场景"><span class="nav-number">1.</span> <span class="nav-text">质量属性场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可用性的一般场景生成"><span class="nav-number">1.1.</span> <span class="nav-text">可用性的一般场景生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可用性的一般场景"><span class="nav-number">1.2.</span> <span class="nav-text">可用性的一般场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可用性的场景样例"><span class="nav-number">1.3.</span> <span class="nav-text">可用性的场景样例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统质量属性"><span class="nav-number">2.</span> <span class="nav-text">系统质量属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他系统质量属性"><span class="nav-number">3.</span> <span class="nav-text">其他系统质量属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#商业质量属性"><span class="nav-number">4.</span> <span class="nav-text">商业质量属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构架质量属性"><span class="nav-number">5.</span> <span class="nav-text">构架质量属性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Paul Jiang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

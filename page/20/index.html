@@ -1,0 +1,3378 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script src="https://www.xpanda.info/echarts/echarts.min.js"></script>
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Paul Jiang&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/20/index.html">
+<meta property="og:site_name" content="Paul Jiang&#39;s Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Paul Jiang&#39;s Blog">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/20/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Paul Jiang's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?491c3ccef3fc6b3b766f88ca5d0e4d62";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Paul Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/数据结构与算法/数据结构与算法/List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/数据结构与算法/数据结构与算法/List/" itemprop="url">
+                  List
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-14 12:31:22" itemprop="dateCreated datePublished" datetime="2018-10-14T12:31:22+00:00">2018-10-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="MyArrayList"><a href="#MyArrayList" class="headerlink" title="MyArrayList"></a>MyArrayList</h2><p>MyArrayList将保持基础数组，数组的容量，以及存储在MyArrayList中的当前项数。</p>
+<p>MyArrayList将提供一种机制以改变基础数组的容量。通过获得一个新数组，将老数组拷贝到新数组中来改变数组的容量，允许虚拟机回收老数组。</p>
+<p>MyArrayList将提供get和set的实现。</p>
+<p>MyArrayList将提供基本的例程，如size、isEmpty和clear。还提供remove，以及两种不同版本的add。如果数组的大小和容量相同，那么这两个add例程将增加容量。</p>
+<p>MyArrayList将提供一个实现Iterator接口的类。这个类将存储迭代序列中的下一项的下表，并提供next、hasNext和remove等方法的实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">public class MyArrayList&lt;AnyType&gt; implements Iterable&lt;AnyType&gt;</span><br><span class="line">&#123;</span><br><span class="line">	private static final int DEFAULT_CAPACITY = 10;</span><br><span class="line">	</span><br><span class="line">	private int theSize;</span><br><span class="line">	private AnyType[] theItems;</span><br><span class="line">	</span><br><span class="line">	public int size()</span><br><span class="line">	&#123;</span><br><span class="line">		return theSize;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public boolean isEmpty()</span><br><span class="line">	&#123;</span><br><span class="line">		return size() == 0;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//调整容量符合大小</span><br><span class="line">	public void trimToSize()</span><br><span class="line">	&#123;</span><br><span class="line">		ensureCapacity(size());</span><br><span class="line">	&#125;</span><br><span class="line">	//确保数组大小足够大</span><br><span class="line">	public void ensureCapacity(int newCapacity)</span><br><span class="line">	&#123;</span><br><span class="line">		if(newCapacity &lt; theSize)</span><br><span class="line">			return;</span><br><span class="line">		</span><br><span class="line">		//复制数据到新数组中</span><br><span class="line">		AnyType[] old = theItems;</span><br><span class="line">		theItems = (AnyType[]) new Object[newCapacity];</span><br><span class="line">		for(int i = 0; i &lt;size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			theItems[i] = old[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public AnyType get(int index)</span><br><span class="line">	&#123;</span><br><span class="line">		if(index &lt; 0 || index &gt;= size())</span><br><span class="line">		&#123;</span><br><span class="line">			throw new ArrayIndexOutOfBoundsException();</span><br><span class="line">		&#125;</span><br><span class="line">		return theItems[index];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public AnyType set(int index, AnyType newVal)</span><br><span class="line">	&#123;</span><br><span class="line">		if(index &lt; 0 || index &gt;= size())</span><br><span class="line">		&#123;</span><br><span class="line">			throw new ArrayIndexOutOfBoundsException();</span><br><span class="line">		&#125;</span><br><span class="line">		AnyType old = theItems[index];</span><br><span class="line">		theItems[index] = newVal;</span><br><span class="line">		return old;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void add(int index, AnyType x)</span><br><span class="line">	&#123;</span><br><span class="line">		//数组不够大，则扩大数组</span><br><span class="line">		if(theItems.length == size())</span><br><span class="line">		&#123;</span><br><span class="line">			ensureCapacity(size()*2 + 1);</span><br><span class="line">		&#125;</span><br><span class="line">		//从index开始，元素往后移动一位</span><br><span class="line">		for(int i = theSize; i &gt; index; i--)</span><br><span class="line">		&#123;</span><br><span class="line">			theItems[i] = theItems[i - 1];</span><br><span class="line">		&#125;</span><br><span class="line">		//index位置赋值x</span><br><span class="line">		theItems[index] = x;</span><br><span class="line">		theSize++;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public AanyType remove(int index)</span><br><span class="line">	&#123;</span><br><span class="line">		AnyType removedItem = theItems[index];</span><br><span class="line">		for(int i = index; i &lt; size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			//从index位置开始，所有元素都往前移动一位</span><br><span class="line">			theItems[i] = theItems[i + 1];</span><br><span class="line">		&#125;</span><br><span class="line">		theSize--;</span><br><span class="line">		return removedItem;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public java.util.Iterator&lt;AnyType&gt; iterator()</span><br><span class="line">	&#123;</span><br><span class="line">		return new ArrayListIterator&lt;AnyType&gt;();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private static class ArrayListIterator&lt;AnyType&gt; implements java.util.Iterator&lt;AnyType&gt;</span><br><span class="line">	&#123;</span><br><span class="line">		private int current = 0;</span><br><span class="line">		</span><br><span class="line">		public boolean hasNext()</span><br><span class="line">		&#123;</span><br><span class="line">			return current &lt; MyArrayList.this.size();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		public AnyType next()</span><br><span class="line">		&#123;</span><br><span class="line">			return MyArrayList.this.theItems[current++];</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		public void remove()</span><br><span class="line">		&#123;</span><br><span class="line">			//防止迭代器的remove与MyArrayList的remove冲突</span><br><span class="line">			MyArrayList.this.remove(--current);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="MyLinkedList"><a href="#MyLinkedList" class="headerlink" title="MyLinkedList"></a>MyLinkedList</h2><p>MyLinkedList类，包含两端的链、表的大小以及一些方法。</p>
+<p>Node类，一个节点包含数据以及到前一个节点的链和到下一个节点的链，还有一些适当的构造方法。</p>
+<p>LinkedListIterator类，该类抽象了位置的概念，并实现接口Iterator。它提供了方法next、hasNext和remove的实现</p>
+<p>使用额外的头节点和尾节点的优点在于，通过排除许多特殊情形极大地简化了编码。例如，如果我不使用头节点，那么删除第1个节点就变成了一种特殊的情况，因为在删除期间我们必须重新调整链表到第1个节点的链。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line">public class MyLinkedList&lt;AnyType&gt; implements Iterable&lt;AnyType&gt;</span><br><span class="line">&#123;</span><br><span class="line">	private static class Node&lt;AnyType&gt;</span><br><span class="line">	&#123;</span><br><span class="line">		public AnyType data;</span><br><span class="line">		public Node&lt;AnyType&gt; prev;</span><br><span class="line">		public Node&lt;AnyType&gt; next;</span><br><span class="line">		public Node(AnyType d, Node&lt;AnyType&gt; p, Node&lt;AnyType&gt; n)</span><br><span class="line">		&#123;</span><br><span class="line">			data = d;</span><br><span class="line">			prev = p;</span><br><span class="line">			next = n;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private int theSize;</span><br><span class="line">	//自从链表构造以来对链表所做的改变次数</span><br><span class="line">	//与迭代器里的modCount进行比较</span><br><span class="line">	private int modCount = 0;</span><br><span class="line">	//头节点</span><br><span class="line">	private Node&lt;AnyType&gt; beginMarker;</span><br><span class="line">	//尾节点</span><br><span class="line">	private Node&lt;AnyType&gt; endMarker;</span><br><span class="line">	</span><br><span class="line">	public boolean add(AnyType x)</span><br><span class="line">	&#123;</span><br><span class="line">		add(size(), x);</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void add(int index, AnyType x)</span><br><span class="line">	&#123;</span><br><span class="line">		//根据index获取节点，在该节点前添加x</span><br><span class="line">		addBefore(getNode(index, x));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void addBefore(Node&lt;AnyType&gt; p, AnyTyoe x)</span><br><span class="line">	&#123;</span><br><span class="line">		//在p和p之前插入新节点</span><br><span class="line">		Node&lt;AnyType&gt; newNode = new Node&lt;AnyType&gt;(x, p.prev, p);</span><br><span class="line">		//更新新节点前一节点的后一节点链接</span><br><span class="line">		newNode.prev.next = newNode;</span><br><span class="line">		//更新p的前一节点链接</span><br><span class="line">		p.prev = newNode;</span><br><span class="line">		theSize++;</span><br><span class="line">		modCount++;</span><br><span class="line">	&#125;</span><br><span class="line">	public AnyType get(int index)</span><br><span class="line">	&#123;</span><br><span class="line">		return getNode(index).data;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public AnyType set(int index, AnyType newVal)</span><br><span class="line">	&#123;</span><br><span class="line">		Node&lt;AnyType&gt; p = getNode(index);</span><br><span class="line">		AnyType oldVal = p.data;</span><br><span class="line">		p.data = newVal;</span><br><span class="line">		return oldVal;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public AnyType remove(int index)</span><br><span class="line">	&#123;</span><br><span class="line">		return remove(getNode(index));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private AnyType remove(Node&lt;AnyType&gt; p)</span><br><span class="line">	&#123;</span><br><span class="line">		p.next.prev = p.prev;</span><br><span class="line">		p.prev.next = p.next;</span><br><span class="line">		theSize--;</span><br><span class="line">		modCount++;</span><br><span class="line">		</span><br><span class="line">		return p.data;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private Node&lt;AnyType&gt; getNode(int index)</span><br><span class="line">	&#123;</span><br><span class="line">		Node&lt;AnyType&gt; p;</span><br><span class="line">		</span><br><span class="line">		if(index &lt; 0 || index &gt; size())</span><br><span class="line">		&#123;</span><br><span class="line">			throw new IndexOutOfBoundsException();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//从头节点或者尾节点开始查找</span><br><span class="line">		if(index &lt; size() / 2)</span><br><span class="line">		&#123;</span><br><span class="line">			p = beginMarker.next;</span><br><span class="line">			for(int i = 0; i &lt; index; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				p = p.next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			p = endMarker;</span><br><span class="line">			for(int i = size(); i &gt; index; i--)</span><br><span class="line">			&#123;</span><br><span class="line">				p = p.prev;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		return p;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private class LinkedListIterator implements java.util.Iterator&lt;AnyType&gt;</span><br><span class="line">	&#123;</span><br><span class="line">		private Node&lt;AnyType&gt; current = beginMarker.next;</span><br><span class="line">		private int expectedModCount = modCount;</span><br><span class="line">		private boolean okToRemove = false;</span><br><span class="line">		</span><br><span class="line">		public boolean hasNext()</span><br><span class="line">		&#123;</span><br><span class="line">			return current != endMarker;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		public AnyType next()</span><br><span class="line">		&#123;</span><br><span class="line">			if(modCount != expectedModCount)</span><br><span class="line">			&#123;</span><br><span class="line">				throw new java.util.ConcurrentModificationException();</span><br><span class="line">			&#125;</span><br><span class="line">			if(!hasNext())</span><br><span class="line">			&#123;</span><br><span class="line">				throw new java.util.NoSuchElementException();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			AnyType nextItem = current.data;</span><br><span class="line">			current = current.next;</span><br><span class="line">			okToRemove = true;</span><br><span class="line">			return nextItem;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		public void remove()</span><br><span class="line">		&#123;</span><br><span class="line">			if(modCount != expectedModCount)</span><br><span class="line">			&#123;</span><br><span class="line">				throw new java.util.ConcurrentModificationException();</span><br><span class="line">			&#125;</span><br><span class="line">			if(!okToRemove)</span><br><span class="line">			&#123;</span><br><span class="line">				throw new IllegalStateException();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			MyLinkedList.this.remove(current.prev);</span><br><span class="line">			okToRemove = false;</span><br><span class="line">			expectedModCount++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/虚拟化/虚拟化/Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/虚拟化/虚拟化/Docker/" itemprop="url">
+                  Docker
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-14 12:19:28" itemprop="dateCreated datePublished" datetime="2018-10-14T12:19:28+00:00">2018-10-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/虚拟化/" itemprop="url" rel="index"><span itemprop="name">虚拟化</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><h3 id="修改YUM源"><a href="#修改YUM源" class="headerlink" title="修改YUM源"></a>修改YUM源</h3><ol>
+<li><p>备份<br>mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</p>
+</li>
+<li><p>下载对应版本repo文件<br>wget <a href="http://mirrors.163.com/.help/CentOS7-Base-163.repo" target="_blank" rel="noopener">http://mirrors.163.com/.help/CentOS7-Base-163.repo</a></p>
+</li>
+<li><p>运行以下命令生成缓存<br>yum clean all<br>yum makecache</p>
+</li>
+<li><p>安装docker<br>yum install docker</p>
+</li>
+</ol>
+<h2 id="Docker-Registry搭建"><a href="#Docker-Registry搭建" class="headerlink" title="Docker Registry搭建"></a>Docker Registry搭建</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 5000:5000 -v /data/registry:/var/lib/registry --restart=always --name registry registry:2</span><br><span class="line"># 配置非安全访问的仓库IP:端口号</span><br><span class="line">/etc/docker/daemon.json </span><br><span class="line">&quot;insecure-registries&quot;:[&quot;10.0.2.15:5000&quot;]</span><br><span class="line"></span><br><span class="line">docker push 192.168.1.62:5000/xpanda/busybox</span><br><span class="line">docker pull 192.168.1.62:5000/xpanda/busybox</span><br></pre></td></tr></table></figure>
+<h2 id="常用Docker命令"><a href="#常用Docker命令" class="headerlink" title="常用Docker命令"></a>常用Docker命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">docker search</span><br><span class="line">docker ps</span><br><span class="line">docker images</span><br><span class="line">#删除镜像</span><br><span class="line">docker rmi</span><br><span class="line">#删除容器实例</span><br><span class="line">docker rm</span><br><span class="line">#下载镜像</span><br><span class="line">docker pull quay.io/coreos/etcd:v3.2.16</span><br><span class="line">#构建镜像</span><br><span class="line">docker build -t xpanda/nginx:1.12.2 .</span><br><span class="line">#后台运行</span><br><span class="line">docker run -d -p 8080:8080 -p 443:443 --ip 10.20.0.1 -v /data/configs/nginx/conf.d:/etc/nginx/conf.d -v /data/configs/nginx/certs:/etc/nginx/certs xpanda/nginx:1.12.2</span><br><span class="line">#进入容器</span><br><span class="line">docker exec -it 5c61a04b14fc /bin/bash</span><br><span class="line">#日志查看</span><br><span class="line">docker logs -f --tail=100 6aa2172c8742</span><br><span class="line">journalctl -u docker.service -n</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/边干边学LINUX内核指导-编译/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/边干边学LINUX内核指导-编译/" itemprop="url">
+                  边干边学LINUX内核指导-编译
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 11:28:00" itemprop="dateCreated datePublished" datetime="2018-10-01T11:28:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
+<li>操作系统Fedora Core 5</li>
+</ol>
+<h2 id="配置内核"><a href="#配置内核" class="headerlink" title="配置内核"></a>配置内核</h2>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/Linux-makefile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/Linux-makefile/" itemprop="url">
+                  Linux-makefile
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 11:28:00" itemprop="dateCreated datePublished" datetime="2018-10-01T11:28:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="make命令和makefile文件"><a href="#make命令和makefile文件" class="headerlink" title="make命令和makefile文件"></a>make命令和makefile文件</h1><p>make命令和makefile文件的结合提供了一个在项目管理领域十分强大的工具。</p>
+<p>makefile文件由一组依赖关系和规则构成。每个依赖关系由一个目标(即将要创建的文件)和一组该目标所依赖的源文件组成。而规则描述了如何通过这些依赖文件创建目标。一般来说，目标是一个单独的可执行文件。</p>
+<p>make命令会读取makefile文件的内容，它先确定目标文件或要创建的文件，然后比较该目标所依赖的源文件的日期和时间以决定采用哪条规则来构造目标。通常在创建最终的目标文件之前，它需要先创建一些中间目标。make命令会根据makefile文件来确定目标文件的创建顺序以及正确的规则调用顺序。</p>
+<h2 id="makefile语法"><a href="#makefile语法" class="headerlink" title="makefile语法"></a>makefile语法</h2><h3 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h3><p>依赖关系定义了最终应用程序里的每个文件与源文件之间的关系。</p>
+<p>规则的写法是：<br>目标的名称: [文件] [文件] …</p>
+<p>以下规则表示目标myapp依赖于main.o、2.o和3.o，而main.o依赖于main.h和a.h，等等。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">myapp: main.o 2.o 3.o</span><br><span class="line">main.o: main.c a.h</span><br><span class="line">2.o: 2.c a.h b.h</span><br><span class="line">3.o: 3.c b.h c.h</span><br></pre></td></tr></table></figure>
+<p>如果想一次创建多个文件，可以利用伪目标all。如果未指定一个all目标，则make命令将只创建它在文件makefile中找到的第一个目标。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">all: myapp myapp.1</span><br></pre></td></tr></table></figure>
+<h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><p>makefile文件的第二部分内容是规则，它们定义了目标的创建方式。规则必须以[tab]开头，不能是空格。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myapp: main.o 2.o 3.o</span><br><span class="line">  gcc -o myapp main.o 2.o 3.o</span><br></pre></td></tr></table></figure>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>makefile文件中的注释以#号开头。</p>
+<h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><p>通过语句<code>MACRONAME=value</code>在makefile文件中定义宏，引用宏的方法是使用<code>$(MACRONAME)</code>或<code>${MARCRONAME}</code>。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/Linux-内存管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/Linux-内存管理/" itemprop="url">
+                  Linux-内存管理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 11:28:00" itemprop="dateCreated datePublished" datetime="2018-10-01T11:28:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="简单的内存分配"><a href="#简单的内存分配" class="headerlink" title="简单的内存分配"></a>简单的内存分配</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">malloc</span><span class="params">(<span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">free</span><span class="params">(<span class="keyword">void</span> *ptr)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="页"><a href="#页" class="headerlink" title="页"></a>页</h2><p>内核把物理页作为内存管理的基本单位。尽管处理器的最小可寻址单位通常为字，但是，内存管理单元(MMU，管理内存并把虚拟地址装换为物理地址的硬件)通常以页为单位进行处理。从虚拟内存的角度来看，页就是最小单位。</p>
+<p>大多数32位体系结构支持4KB的页，而64位体系结构一般会支持8KB的页。这就意味着，在支持4KB页大小并有1GB物理内存的机器上，物理内存会被划分为262144个页。</p>
+<h2 id="区"><a href="#区" class="headerlink" title="区"></a>区</h2><p>由于硬件的限制，内核并不能对所有的页一视同仁。有些页位于内存中特定的物理地址上，所以不能将其用于一些特定的任务。由于存在这种限制，所以内核把页划分为不同的区(zone)。内核使用区对具有相似特性的页进行分组。Linux必须处理如下两种由于硬件存在缺陷而引起的内存寻址问题。</p>
+<ol>
+<li>一些硬件只能用某些特定的内存地址来执行DMA（直接内存访问）。</li>
+<li>一些体系结构的内存的物理寻址范围比虚拟寻址范围大得多。这样，就有一些内存不能永久的映射到内核空间上。</li>
+</ol>
+<p>Linux主要使用了四种区：</p>
+<ul>
+<li>ZONE_DMA：这个区包含的页能用来执行DMA操作。</li>
+<li>ZONE_DMA32：与ZONE_DMA不同之处在于这些页面只能被32位设备访问。</li>
+<li>ZONE_NORMAL：这个区包含的都是能正常映射的页。</li>
+<li>ZONE_HIGHMEM：这个区包含“高端内存”，其中的页并不能永久地映射到内核地址空间。</li>
+</ul>
+<p>区的实际使用和分布是与体系结构相关的。区的划分没有任何物理意义，这只不过是内核为了管理页而采取的一种逻辑上的分组。</p>
+<h3 id="x86-32上的区"><a href="#x86-32上的区" class="headerlink" title="x86-32上的区"></a>x86-32上的区</h3><table>
+<thead>
+<tr>
+<th>区</th>
+<th>描述</th>
+<th>物理内存</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZONE_DMA</td>
+<td>DMA使用的页</td>
+<td>&lt;16MB</td>
+</tr>
+<tr>
+<td>ZONE_NORMAL</td>
+<td>正常可寻址的页</td>
+<td>16-896M</td>
+</tr>
+<tr>
+<td>ZONE_HIGHMEM</td>
+<td>动态映射的页</td>
+<td>&gt;896M</td>
+</tr>
+</tbody>
+</table>
+<h2 id="页的操作"><a href="#页的操作" class="headerlink" title="页的操作"></a>页的操作</h2><p>内核是完全信赖自己的。这点与用户空间不同，如果你有非法操作，内核会开开心心的把自己挂起来，停止运行。</p>
+<p>获得页：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">释放页：```free_pages</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/Linux-虚拟文件系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/Linux-虚拟文件系统/" itemprop="url">
+                  Linux-虚拟文件系统
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 11:28:00" itemprop="dateCreated datePublished" datetime="2018-10-01T11:28:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>虚拟文件系统(VFS)作为内核子系统，为用户空间程序提供了文件和文件系统相关的接口。程序可以利用标准的Unix系统调用不同的文件系统，甚至是不同介质上的文件系统。</p>
+<h2 id="文件系统抽象层"><a href="#文件系统抽象层" class="headerlink" title="文件系统抽象层"></a>文件系统抽象层</h2><p>之所以可以使用这种通用接口对所有类型的文件系统进行操作，是因为内核在它的底层文件系统接口上建立了一个抽象层。它定义了所有文件系统都支持的、基本的、概念上的接口和数据结构。</p>
+<p>Unix使用了四种和文件系统相关的传统抽象概念：文件、目录项、索引节点和安装点。</p>
+<h3 id="安装点-Mount-Point"><a href="#安装点-Mount-Point" class="headerlink" title="安装点(Mount Point)"></a>安装点(Mount Point)</h3><p>在Unix系统中，文件系统被安装在一个特定的安装点上，该安装点在全局层次结构中被称作命名空间，所有的已安装文件系统都作为根文件系统树的枝叶出现在系统中。</p>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><p>文件是简单的面向字节流的有序字节串。</p>
+<h3 id="目录项"><a href="#目录项" class="headerlink" title="目录项"></a>目录项</h3><p>文件通过目录组织起来。目录条目统称为目录项。在Unix中，目录属于普通文件，它列出包含在其中的所有文件。</p>
+<h3 id="索引节点"><a href="#索引节点" class="headerlink" title="索引节点"></a>索引节点</h3><p>Unix系统将文件的相关信息和文件本身这两个概念加以区分，例如访问控制权限、大小、拥有者、创建时间等信息。文件相关信息，被存储在一个单独的数据结构中，该结构被称为索引节点。</p>
+<h3 id="超级块"><a href="#超级块" class="headerlink" title="超级块"></a>超级块</h3><p>超级块是一种包含文件系统信息的数据结构。</p>
+<h2 id="VFS对象及其数据结构"><a href="#VFS对象及其数据结构" class="headerlink" title="VFS对象及其数据结构"></a>VFS对象及其数据结构</h2><p>VFS采用的是面向对象的设计思路，使用一组数据结构来代表通用文件对象。</p>
+<p>VFS中有四个主要的对象类型</p>
+<ol>
+<li>超级块对象：代表一个具体的已安装文件系统</li>
+<li>索引节点对象：代表一个具体文件</li>
+<li>目录项对象：代表一个目录项，是路径的一个组成部分</li>
+<li>文件对象：代表由进程打开的文件</li>
+</ol>
+<p>因为VFS将目录作为一个文件来处理，所以不存在目录对象。</p>
+<h3 id="超级块对象"><a href="#超级块对象" class="headerlink" title="超级块对象"></a>超级块对象</h3><p>各种文件系统都必须实现超级块对象，该对象用于存储特定文件系统的信息，通常对应于存放在磁盘特定扇区中的文件系统超级块或文件系统控制块。对于并非基于磁盘的文件系统（如基于内存的文件系统，比如sysfs），它们会在使用现场创建超级块并将其保存到内存中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct super_block &#123;</span><br><span class="line">  unsigned long long s_maxbytes;//文件大小上限</span><br><span class="line">  struct file_system_type s_type;//文件系统类型</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="索引节点对象"><a href="#索引节点对象" class="headerlink" title="索引节点对象"></a>索引节点对象</h3><p>索引节点对象包含了内核在操作文件或目录时需要的全部信息。对于Unix风格的文件系统来说，这些信息可以从磁盘索引节点直接读入。如果一个文件系统没有索引节点，那么，不管这些相关信息在磁盘上是怎么存放的，文件系统都必须从中提取信息。没有索引节点的文件系统通常将文件的描述信息作为文件的一部分来存放。这些文件系统与Unix风格的文件系统不同，没有将数据与控制信息分开存放。有些现代文件系统使用数据库来存储文件的数据。不管哪种情况、采用哪种方式，索引节点对象必须在内存中创建，以便于文件系统使用。</p>
+<p>一个索引节点代表文件系统中（但是索引节点仅当文件被访问时，才在内存中创建）的一个文件，它也可以是设备或管道这样的特殊文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">struct inode &#123;</span><br><span class="line">  unsigned long i_ino;//节点号</span><br><span class="line">  atomic_t i_count;//引用计数</span><br><span class="line">  loff_t i_size;//以字节为单位的文件大小</span><br><span class="line">  struct address_space *i_mapping;//相关的地址映射</span><br><span class="line">  struct address_space i_data;//设备地址映射</span><br><span class="line">  struct dquot *i_dquot[MAXQUOTAS];//索引节点的磁盘限额</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="目录项对象"><a href="#目录项对象" class="headerlink" title="目录项对象"></a>目录项对象</h3><p>为了方便查找操作，VFS引入了目录项的概念。每个dentry代表路径中的一个特定部分。在路径中(包括普通文件在内)，每一个部分都是目录项对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// &lt;linux/dcache.h&gt;</span><br><span class="line"></span><br><span class="line">struct dentry &#123;</span><br><span class="line">  struct dentry *d_parent;//父目录的目录项对象</span><br><span class="line">  struct qstr d_name;//目录项名称</span><br><span class="line">  struct inode *d_inode;//相关联的索引节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="文件对象"><a href="#文件对象" class="headerlink" title="文件对象"></a>文件对象</h3><p>文件对象表示进程已打开的文件。文件对象是已打开的文件在内存中的表示。因为多个进程可以同时打开和操作同一个文件，所以同一个文件也可能存在多个对应的文件对象。文件对象仅仅在进程观点上代表已打开文件，它反过来指向目录项对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">struct file &#123;</span><br><span class="line">  struct path f_path;//包含目录项</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/Linux-Shell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/Linux-Shell/" itemprop="url">
+                  Linux-shell
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 11:28:00" itemprop="dateCreated datePublished" datetime="2018-10-01T11:28:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>shell是一个作为用户与Linux系统间接口的程序，它允许用户向操作系统输入需要执行的命令。</p>
+<table>
+<thead>
+<tr>
+<th>名</th>
+<th>路径</th>
+<th>FreeBSD 5.2.1</th>
+<th>Linux 2.4.22</th>
+<th>Mac OS X 10.3</th>
+<th>Solaris 9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bourne shell</td>
+<td>/bin/sh</td>
+<td>.</td>
+<td>链接至bash</td>
+<td>链接至bash</td>
+<td>.</td>
+</tr>
+<tr>
+<td>Bourne-again shell</td>
+<td>/bin/bash</td>
+<td>可选的</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+</tr>
+<tr>
+<td>C shell</td>
+<td>/bin/csh</td>
+<td>链接至tcsh</td>
+<td>链接至tcsh</td>
+<td>链接至tcsh</td>
+<td>.</td>
+</tr>
+<tr>
+<td>Korn shell</td>
+<td>/bin/ksh</td>
+<td></td>
+<td></td>
+<td></td>
+<td>.</td>
+</tr>
+<tr>
+<td>TENEX C shell</td>
+<td>/bin/tcsh</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="管道和重定向"><a href="#管道和重定向" class="headerlink" title="管道和重定向"></a>管道和重定向</h1><ul>
+<li>重定向输出</li>
+<li>重定向输入</li>
+<li>管道</li>
+</ul>
+<h1 id="脚本和语法"><a href="#脚本和语法" class="headerlink" title="脚本和语法"></a>脚本和语法</h1><h2 id="第一行"><a href="#第一行" class="headerlink" title="第一行"></a>第一行</h2><p><code>#!</code>告诉系统同一行上紧跟在它后面的那个参数是用来执行本文件的程序。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin.sh</span><br></pre></td></tr></table></figure>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>使用变量之前通常并不需要事先为它们做出声明。<br>变量赋值时，等号两边不能有空格。<br>通过在变量名前加一个$符号来访问它的内容。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=123</span><br><span class="line">echo $a</span><br></pre></td></tr></table></figure>
+<h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><p>当一个shell脚本程序开始执行时，一些变量会根据环境设置中的值进行初始化。这些变量通常用大写字母做名字，以便它们和用户在脚本程序里定义的变量区分开来。</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$HOME</td>
+<td>当前用户目录</td>
+</tr>
+<tr>
+<td>$PATH</td>
+<td>搜索地址</td>
+</tr>
+<tr>
+<td>$PS1</td>
+<td>命令提示符</td>
+</tr>
+<tr>
+<td>$PS2</td>
+<td>二级提示符</td>
+</tr>
+<tr>
+<td>$IFS</td>
+<td>输入域分隔符</td>
+</tr>
+<tr>
+<td>$0</td>
+<td>shell脚本的名字</td>
+</tr>
+<tr>
+<td>$#</td>
+<td>传递给脚本的参数个数</td>
+</tr>
+<tr>
+<td>$$</td>
+<td>shell脚本的进程号</td>
+</tr>
+</tbody>
+</table>
+<h4 id="参数变量"><a href="#参数变量" class="headerlink" title="参数变量"></a>参数变量</h4><p>如果脚本程序在调用时带有参数，一些额外的变量就会被创建。</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1,$2,…</td>
+<td>脚本程序的参数</td>
+</tr>
+<tr>
+<td>$*</td>
+<td>列出所有</td>
+</tr>
+</tbody>
+</table>
+<h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><h4 id="test或"><a href="#test或" class="headerlink" title="test或["></a>test或[</h4><p>在一些老版本的UNIX shell中，test命令调用的是一个外部程序。可以使用which test来检查执行的是哪一个test命令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if test -f fred.c</span><br><span class="line">then</span><br><span class="line">...</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -f fred.c ]</span><br><span class="line">then</span><br><span class="line">...</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>字符串比较</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string1 = string2</td>
+<td></td>
+</tr>
+<tr>
+<td>string1 != string2</td>
+<td></td>
+</tr>
+<tr>
+<td>-n strng</td>
+<td>如果字符串不为空则结果为真</td>
+</tr>
+<tr>
+<td>-z string</td>
+<td>如果字符串为Null(一个空串)则结果为真</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>算术比较</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expression1 -eq expression2</td>
+<td>如果两个表达式相等则结果为真</td>
+</tr>
+<tr>
+<td>expression1 -ne expression2</td>
+<td>如果两个表达式不等则结果为真</td>
+</tr>
+<tr>
+<td>expression1 -gt expression2</td>
+<td>如果expression1大于expression2则结果为真</td>
+</tr>
+<tr>
+<td>expression1 -ge expression2</td>
+<td>如果expression1大于等于expression2则结果为真</td>
+</tr>
+<tr>
+<td>expression1 -lt expression2</td>
+<td>如果expression1小于expression2则结果为真</td>
+</tr>
+<tr>
+<td>expression1 -le expression2</td>
+<td>如果expression1小于等于expression2则结果为真</td>
+</tr>
+<tr>
+<td>!expression</td>
+<td>如果表达式为假则结果为真</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>文件条件测试</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d file</td>
+<td>如果是目录</td>
+</tr>
+<tr>
+<td>-e file</td>
+<td>如果文件存在</td>
+</tr>
+<tr>
+<td>-f file</td>
+<td>如果是普通文件</td>
+</tr>
+<tr>
+<td>-g file</td>
+<td>如果set-group-id位被设置</td>
+</tr>
+<tr>
+<td>-r file</td>
+<td>如果文件刻度</td>
+</tr>
+<tr>
+<td>-s file</td>
+<td>如果文件大小不为0</td>
+</tr>
+<tr>
+<td>-u file</td>
+<td>如果set-user-id位被设置</td>
+</tr>
+<tr>
+<td>-w file</td>
+<td>如果文件可写</td>
+</tr>
+<tr>
+<td>-x file</td>
+<td>如果文件可执行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="控制结构"><a href="#控制结构" class="headerlink" title="控制结构"></a>控制结构</h3><h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if condition</span><br><span class="line">then</span><br><span class="line">  statements</span><br><span class="line">elif</span><br><span class="line">  statements</span><br><span class="line">else</span><br><span class="line">  statements</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h4 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for variable in values</span><br><span class="line">do</span><br><span class="line">  statements</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h4 id="while语句"><a href="#while语句" class="headerlink" title="while语句"></a>while语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while condition do</span><br><span class="line">  statements</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h4 id="until语句"><a href="#until语句" class="headerlink" title="until语句"></a>until语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">until condition</span><br><span class="line">do</span><br><span class="line">  statements</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<h4 id="case语句"><a href="#case语句" class="headerlink" title="case语句"></a>case语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">case variable in</span><br><span class="line">  pattern [|pattern]...) statements;;</span><br><span class="line">  pattern [|pattern]...) statements;;</span><br><span class="line">  ...</span><br><span class="line">esac</span><br><span class="line"></span><br><span class="line">case "$timeofday" in</span><br><span class="line">  yes) echo "Good Morning";;</span><br><span class="line">  no ) echo "Good Afternonn";;</span><br><span class="line">  ...</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<h4 id="AND和OR语句"><a href="#AND和OR语句" class="headerlink" title="AND和OR语句"></a>AND和OR语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">statement1 &amp;&amp; statement2 &amp;&amp; statement3</span><br><span class="line">statement1 || statement2 || statement3</span><br></pre></td></tr></table></figure>
+<h4 id="语句块"><a href="#语句块" class="headerlink" title="语句块"></a>语句块</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">get_confirm &amp;&amp; &#123;</span><br><span class="line">  grep -v "$cdcatnum" $tracks_file &gt; $temp_file</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>必须在调用一个函数之前先对它进行定义。当一个函数被调用时，脚本程序的位置参数($*,$@,$#,$1等)会被替换为函数的参数。当函数执行完毕后，这些参数会恢复为它们先前的值。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function_names()&#123;</span><br><span class="line">  statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="break命令"><a href="#break命令" class="headerlink" title="break命令"></a>break命令</h4><p>用于跳出循环</p>
+<h4 id="冒号命令"><a href="#冒号命令" class="headerlink" title=":冒号命令"></a>:冒号命令</h4><p>冒号（:）命令是一个空命令。用于简化条件逻辑，相当于true的别名，比true快。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 无限循环</span><br><span class="line">while :</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 条件设置</span><br><span class="line">: $&#123;var:=value&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="continue命令"><a href="#continue命令" class="headerlink" title="continue命令"></a>continue命令</h4><p>继续循环</p>
+<h4 id="命令-1"><a href="#命令-1" class="headerlink" title=".命令"></a>.命令</h4><p>点(.)命令用于在当前shell中执行命令。点命令实在当前上下文中执行命令，所以可以改变当前脚本中的变量参数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">. ./shell_script</span><br></pre></td></tr></table></figure>
+<h4 id="echo命令"><a href="#echo命令" class="headerlink" title="echo命令"></a>echo命令</h4><p>输出字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo -n "string to output"</span><br></pre></td></tr></table></figure>
+<h4 id="eval命令"><a href="#eval命令" class="headerlink" title="eval命令"></a>eval命令</h4><p>对参数进行求值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foo=10</span><br><span class="line">x=foo</span><br><span class="line">eval y='$'$x</span><br><span class="line">echo $y</span><br><span class="line"><span class="meta">#</span>输出10</span><br></pre></td></tr></table></figure>
+<h3 id="命令的执行"><a href="#命令的执行" class="headerlink" title="命令的执行"></a>命令的执行</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 旧的语法，反引号</span><br><span class="line">`command`</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 新的语法</span><br><span class="line"><span class="meta">$</span>(command)</span><br></pre></td></tr></table></figure>
+<h3 id="调试脚本程序"><a href="#调试脚本程序" class="headerlink" title="调试脚本程序"></a>调试脚本程序</h3><p>跟踪脚本程序中复杂错误的主要方法是设置各种shell选项。为此，你可以在调用shell时加上命令行选项，或是使用set命令。</p>
+<table>
+<thead>
+<tr>
+<th>命令行选项</th>
+<th>set选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sh -n</td>
+<td>set -n</td>
+<td>只检查语法错误，不执行命令</td>
+</tr>
+<tr>
+<td>sh -v</td>
+<td>set -v</td>
+<td>在执行命令之前回显它们</td>
+</tr>
+<tr>
+<td>sh -x</td>
+<td>set -x</td>
+<td>在处理命令之后回显它们</td>
+</tr>
+<tr>
+<td>sh -u</td>
+<td>set -u</td>
+<td>如果使用了未定义的变量，就给出出错消息</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/CentOS-内核升级/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/CentOS-内核升级/" itemprop="url">
+                  CentOS-内核升级
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 11:28:00" itemprop="dateCreated datePublished" datetime="2018-10-01T11:28:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>EPEL的全称叫 Extra Packages for Enterprise Linux 。EPEL是由 Fedora 社区打造，为 RHEL 及衍生发行版如 CentOS、Scientific Linux 等提供高质量软件包的项目。装上了 EPEL之后，就相当于添加了一个第三方源。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看当前内核版本</span><br><span class="line">uname -r</span><br><span class="line">cat /etc/redhat-release</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 安装内核包</span><br><span class="line">yum install kernel-lt-4.4.147-1.el7.elrepo.x86_64.rpm</span><br><span class="line">yum install kernel-lt-devel-4.4.147-1.el7.elrepo.x86_64.rpm</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 查看启动项</span><br><span class="line">awk -F\' '$1=="menuentry " &#123;print i++ " : " $2&#125;' /etc/grub2.cfg</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 设置启动项</span><br><span class="line">grub2-set-default 0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 检查启动项是否设置成功</span><br><span class="line">grub2-editenv list</span><br></pre></td></tr></table></figure>
+<h2 id="编译内核"><a href="#编译内核" class="headerlink" title="编译内核"></a>编译内核</h2><p><a href="https://wiki.centos.org/HowTos/Custom_Kernel" target="_blank" rel="noopener">https://wiki.centos.org/HowTos/Custom_Kernel</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">yum install -y rpm-build rpmdevtools</span><br><span class="line"></span><br><span class="line">yum groupinstall -y "Development Tools"</span><br><span class="line">yum install -y asciidoc bc m4 net-tools openssl-devel xmlto audit-libs-devel binutils-devel bison elfutils-devel java-1.8.0-openjdk-devel newt-devel numactl-devel perl-ExtUtils-Embed python-devel slang-devel xz-devel zlib-devel ncurses-devel pciutils pciutils-devel</span><br><span class="line"><span class="meta">#</span> 生成目录</span><br><span class="line">rpmdev-setuptree</span><br><span class="line"></span><br><span class="line">cp kernel-lt-4.4.147-1.el7.elrepo.nosrc.rpm rpmbuild/SRPMS/</span><br><span class="line">cp linux-4.4.147.tar.xz rpmbuild/SOURCES/</span><br><span class="line"></span><br><span class="line">rpm -ivh ~/rpmbuild/SRPMS/kernel-lt-4.4.147-1.el7.elrepo.nosrc.rpm</span><br><span class="line"><span class="meta">#</span> 使用rpmbuild就可以一键编出你的内核到 ~/rpmbuild/RPMS/ 目录中了</span><br><span class="line">rpmbuild -bb --with baseonly --with firmware ~/rpmbuild/SPECS/kernel-lt-4.4.spec</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>编译过程会用到大量随机种子，遇到 waiting for lock on `./random_seed'... 提示时请执行</span><br><span class="line">rngd -r /dev/urandom</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/性能之巅-2文件系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/性能之巅-2文件系统/" itemprop="url">
+                  性能之巅-2文件系统
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 00:02:00" itemprop="dateCreated datePublished" datetime="2018-10-01T00:02:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/操作系统/操作系统/性能之巅-1基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/操作系统/操作系统/性能之巅-1基本概念/" itemprop="url">
+                  性能之巅-1基本概念
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-01 00:01:00" itemprop="dateCreated datePublished" datetime="2018-10-01T00:01:00+00:00">2018-10-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="系统性能"><a href="#系统性能" class="headerlink" title="系统性能"></a>系统性能</h2><p>系统性能是对整个系统的研究，包括了所有的硬件组件和整个软件栈。对于分布式系统来说，这意味着多台服务器和多个应用。</p>
+<h2 id="人员"><a href="#人员" class="headerlink" title="人员"></a>人员</h2><p>系统性能是一项需要多类人员参与的事务，其中包括系统管理员、技术支持人员、应用开发者、数据库管理员和网络管理员。对于他们的大多数来说，性能是一项兼职的事情，他们可能会有发掘性能的倾向，但仅限于本职工作范围内（网络团队检查网络、数据库团队检查数据库，如此等等）。然而，对于某些性能问题，要找到根本原因还需要这些团队一起协同工作才行。</p>
+<p>一些公司会雇佣性能工程师，其主要任务就是维护系统性能。他们与多个团队协同工作，对环境做全局性的研究。</p>
+<h2 id="事情"><a href="#事情" class="headerlink" title="事情"></a>事情</h2><h2 id="视角"><a href="#视角" class="headerlink" title="视角"></a>视角</h2><p>性能可以从不同的角度来审视。负载分析和资源分析。系统管理员作为系统资源的负责人，通常采用资源分析角度。应用程序开发人员，对最终实现的负载性能负责，通常采用负载缝隙角度。</p>
+<h2 id="延时"><a href="#延时" class="headerlink" title="延时"></a>延时</h2><p>性能分析必须量化问题的重要程度。延时非常适合用来量化性能。</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>延时</th>
+<th>相对时间比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1个CPU周期</td>
+<td>0.3ns</td>
+<td>1s</td>
+</tr>
+<tr>
+<td>L1缓存访问</td>
+<td>0.9ns</td>
+<td>3s</td>
+</tr>
+<tr>
+<td>L2缓存访问</td>
+<td>2.8ns</td>
+<td>9s</td>
+</tr>
+<tr>
+<td>L3缓存访问</td>
+<td>12.9ns</td>
+<td>43s</td>
+</tr>
+<tr>
+<td>主存访问（从CPU访问DRAM）</td>
+<td>120ns</td>
+<td>6分</td>
+</tr>
+<tr>
+<td>固态硬盘I/O（闪存）</td>
+<td>50-150us</td>
+<td>2-6天</td>
+</tr>
+<tr>
+<td>旋转磁盘I/O</td>
+<td>1-10ms</td>
+<td>1-12月</td>
+</tr>
+<tr>
+<td>互联网：从旧金山到纽约</td>
+<td>40ms</td>
+<td>4年</td>
+</tr>
+<tr>
+<td>互联网：从旧金山到英国</td>
+<td>81ms</td>
+<td>8年</td>
+</tr>
+<tr>
+<td>互联网：从旧金山到澳大利亚</td>
+<td>183ms</td>
+<td>19年</td>
+</tr>
+<tr>
+<td>TCP包重传</td>
+<td>1-3s</td>
+<td>105-317年</td>
+</tr>
+<tr>
+<td>OS虚拟化系统重启</td>
+<td>4s</td>
+<td>423年</td>
+</tr>
+<tr>
+<td>SCSI命令超时</td>
+<td>30s</td>
+<td>3千年</td>
+</tr>
+<tr>
+<td>硬件虚拟化系统重启</td>
+<td>40s</td>
+<td>4千年</td>
+</tr>
+<tr>
+<td>物理系统重启</td>
+<td>5m</td>
+<td>32千年</td>
+</tr>
+</tbody>
+</table>
+<h2 id="动态跟踪"><a href="#动态跟踪" class="headerlink" title="动态跟踪"></a>动态跟踪</h2><p>动态跟踪技术把所有的软件变得可以监控，而且能用在真实的生产环境中。这项技术利用内存中的CPU指令并在这些指令之上动态构建监测数据。</p>
+<h2 id="指标"><a href="#指标" class="headerlink" title="指标"></a>指标</h2><ul>
+<li>IOPS：每秒的I/O操作数。</li>
+<li>吞吐量：每秒数据量或操作量。</li>
+<li>使用率：给定的时间区间内资源的繁忙程度，有些组件达到100%后，还是能够正常工作。</li>
+<li>饱和度：随着工作量增加而对资源的请求超过资源所能处理的程度，100%后就无法处理，开始排队。</li>
+<li>命中率</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>街灯讹方法</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>随机变动讹方法</td>
+<td>实验分析</td>
+</tr>
+<tr>
+<td>责怪他人讹方法</td>
+<td>假设分析</td>
+</tr>
+<tr>
+<td>Ad Hoc核对清单法</td>
+<td>观测与实验分析</td>
+</tr>
+<tr>
+<td>问题陈述法</td>
+<td>信息收集</td>
+</tr>
+<tr>
+<td>科学法</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>诊断循环</td>
+<td>生命周期分析</td>
+</tr>
+<tr>
+<td>工具法</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>USE方法</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>工作负载特征归纳</td>
+<td>观测分析，容量规划</td>
+</tr>
+<tr>
+<td>向下挖掘分析</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>延时分析</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>R方法</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>事件跟踪</td>
+<td>观测分析</td>
+</tr>
+<tr>
+<td>基础线统计</td>
+<td>观测分析，容量规划</td>
+</tr>
+<tr>
+<td>性能监控</td>
+<td>观测分析，容量规划</td>
+</tr>
+<tr>
+<td>排队论</td>
+<td>统计分析，容量规划</td>
+</tr>
+<tr>
+<td>静态性能调整</td>
+<td>观测分析，容量规划</td>
+</tr>
+<tr>
+<td>缓存调优</td>
+<td>观测分析，调优</td>
+</tr>
+<tr>
+<td>微基准测试</td>
+<td>实验分析</td>
+</tr>
+<tr>
+<td>容量规划</td>
+<td>容量规划，调优</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Paul Jiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">212</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yufeng.info/" title="褚霸" target="_blank">褚霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://agentzh.org/" title="章亦春" target="_blank">章亦春</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://martinfowler.com/" title="Martin Fowler" target="_blank">Martin Fowler</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Paul Jiang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

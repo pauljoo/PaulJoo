@@ -1,0 +1,3264 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script src="https://www.xpanda.info/echarts/echarts.min.js"></script>
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Paul Jiang&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/15/index.html">
+<meta property="og:site_name" content="Paul Jiang&#39;s Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Paul Jiang&#39;s Blog">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/15/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Paul Jiang's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?491c3ccef3fc6b3b766f88ca5d0e4d62";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Paul Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java/Java/HotSpot实战-3类与对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Java/Java/HotSpot实战-3类与对象/" itemprop="url">
+                  HotSpot实战-3类与对象
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-15 00:03:00" itemprop="dateCreated datePublished" datetime="2018-11-15T00:03:00+00:00">2018-11-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="源码路径"><a href="#源码路径" class="headerlink" title="源码路径"></a>源码路径</h2><blockquote>
+<p>hotspot/src/share/vm/oops</p>
+</blockquote>
+<h2 id="OOP-Klass"><a href="#OOP-Klass" class="headerlink" title="OOP-Klass"></a>OOP-Klass</h2><ol>
+<li>OOP(ordinary object pointer): 普通对象指针，用来描述对象实例信息</li>
+<li>Klass: Java类的C++对等体，用来描述Java类。</li>
+</ol>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h3><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>模块说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oop</td>
+<td>定义了OOPS共同基类</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Klass"><a href="#Klass" class="headerlink" title="Klass"></a>Klass</h3><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>模块说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klass</td>
+<td>用来描述语言层的类型</td>
+</tr>
+<tr>
+<td>instanceKlass</td>
+<td>在虚拟机层面描述一个Java类</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java/Java/HotSpot实战-2启动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Java/Java/HotSpot实战-2启动/" itemprop="url">
+                  HotSpot实战-2启动
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-15 00:02:00" itemprop="dateCreated datePublished" datetime="2018-11-15T00:02:00+00:00">2018-11-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>Hotspot提供了两种Launcher类型，分别是通用启动器(java)和调试版启动器(gamma)。</p>
+<h3 id="通用启动器"><a href="#通用启动器" class="headerlink" title="通用启动器"></a>通用启动器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java [ option ] class [ argument ... ]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>入口：jdk/src/share/bin/main.c</p>
+</blockquote>
+<h3 id="调试版启动器"><a href="#调试版启动器" class="headerlink" title="调试版启动器"></a>调试版启动器</h3><blockquote>
+<p>入口：hostspor/src/share/tools/luncher/java.c</p>
+</blockquote>
+<h2 id="虚拟机生命周期"><a href="#虚拟机生命周期" class="headerlink" title="虚拟机生命周期"></a>虚拟机生命周期</h2><img src="http://www.plantuml.com/plantuml/svg/VP0zQiD048Nxd6BBfF05jd2ZD1AMcnYroqIxM6DMkx0Q2v8hk3AaiJ6ezHaC8QUnv6Du_IDOnucxn_lUF8OtGTAAiyDgtIwQThFhlfhzydk_tBQRvca4SvCNoWs6lUAi13JFBm7gTZ_TTf503Qb7dFNAXsvHs18RGj3ugP8ilMbBnh6l6CSYSWf8dMxF2MyDXfF2cxBYB3z3KPUUNCs0WfIXdwKNsP-5B3P8dDMbG2_4LDjtqDLzu1VzQvUH1HbfgFxZCuCY0gtV20ZppA9C5HLMFeY_AeAyYEREAKENZnwcAtBser_i2000">
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java/Java/HotSpot实战-1内核框架/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Java/Java/HotSpot实战-1内核框架/" itemprop="url">
+                  HotSpot实战-1内核框架
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-15 00:01:00" itemprop="dateCreated datePublished" datetime="2018-11-15T00:01:00+00:00">2018-11-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><h3 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h3><h3 id="源代码下载"><a href="#源代码下载" class="headerlink" title="源代码下载"></a>源代码下载</h3><h3 id="Hotspot源码目录结构概览"><a href="#Hotspot源码目录结构概览" class="headerlink" title="Hotspot源码目录结构概览"></a>Hotspot源码目录结构概览</h3><table>
+<thead>
+<tr>
+<th>目录</th>
+<th></th>
+<th></th>
+<th></th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Serviceability Agent(可维护性代理)</td>
+</tr>
+<tr>
+<td>make</td>
+<td></td>
+<td></td>
+<td></td>
+<td>编译hotspot的makefile文件</td>
+</tr>
+<tr>
+<td>src</td>
+<td></td>
+<td></td>
+<td></td>
+<td>主体源代码</td>
+</tr>
+<tr>
+<td></td>
+<td>cpu</td>
+<td></td>
+<td></td>
+<td>依赖具体处理器架构的代码(ppc,sparc,x86,zero)</td>
+</tr>
+<tr>
+<td></td>
+<td>os</td>
+<td></td>
+<td></td>
+<td>依赖操作系统的代码(bsd,linux,posix,solaris,windows)</td>
+</tr>
+<tr>
+<td></td>
+<td>os_cpu</td>
+<td></td>
+<td></td>
+<td>同时依赖操作系统和处理器的代码</td>
+</tr>
+<tr>
+<td></td>
+<td>share</td>
+<td></td>
+<td></td>
+<td>操作系统和处理器无关的代码(vm,tools)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>vm</td>
+<td></td>
+<td>实现虚拟机各项功能</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>adlc</td>
+<td>平台描述文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>asm</td>
+<td>汇编器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>c1</td>
+<td>C1编译器,client编译器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>ci</td>
+<td>动态编译器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>classfile</td>
+<td>class文件解析和类的链接等</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>code</td>
+<td>机器码生成</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>compiler</td>
+<td>调用动态编译器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>gc_implementation</td>
+<td>gc实现</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>gc_interface</td>
+<td>gc接口</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>interpreter</td>
+<td>解释器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>libadt</td>
+<td>抽象数据结构</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>memory</td>
+<td>内存管理</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>oops</td>
+<td>jvm内部对象表示</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>opto</td>
+<td>C2编译器,server编译器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>precompiled</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>prims</td>
+<td>hotspot对外接口</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>runtime</td>
+<td>运行时</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>services</td>
+<td>jmx接口</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>shark</td>
+<td>基于LLVM实现的即时编译器</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>trace</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>utilizes</td>
+<td>内部工具类和公共函数</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>tools</td>
+<td></td>
+<td>独立的虚拟机工具程序</td>
+</tr>
+<tr>
+<td>test</td>
+<td></td>
+<td></td>
+<td></td>
+<td>测试用例</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Prims"><a href="#Prims" class="headerlink" title="Prims"></a>Prims</h3><p>prims模块定义了外部接口，允许外部程序访问内部状态信息。</p>
+<p>比如，jni模块，jvm模块，jvmti模块，perf模块。</p>
+<h3 id="Services"><a href="#Services" class="headerlink" title="Services"></a>Services</h3><p>services模块主要包含9个主要子模块(management,memory service,thread service, runtime service, memory manager, heap dumper, classloading service, memory pool,attach listener)。</p>
+<h3 id="Runtime"><a href="#Runtime" class="headerlink" title="Runtime"></a>Runtime</h3><p>runtime是运行时模块，为其他系统组件提供运行时支持,如线程、安全点、PerfData、Stub例程、反射、VMOperation以及互斥锁等组件。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/软件工程导论-实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/软件工程导论-实现/" itemprop="url">
+                  软件工程导论-实现
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:30" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:30+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>通常把编码和测试统称为实现。</p>
+<p>编码</p>
+<p>1.选择程序设计语言。选用的标准：系统用户的要求；可以使用的编译程序；可以得到的软件工具；工程规模；程序员的知识；软件可移植性要求；软件的应用领域；</p>
+<p>2.编码风格。遵循规则：程序内部的文档；数据说明；语句构造；输入输出；效率；</p>
+<p>软件测试</p>
+<p>软件测试的目标</p>
+<p>1.测试是为了发现程序中的错误而执行程序的过程。</p>
+<p>2.好的测试方案是极可能发现迄今为止尚未发现的错误的测试方案。</p>
+<p>3.成功的测试是发现了至今为止尚未发现的错误的测试。</p>
+<p>软件测试准则</p>
+<p>1.所有测试都应该能追溯到用户需求。</p>
+<p>2.应该远在测试开始之前就制定出测试计划。</p>
+<p>3.把Pareto原理应用到软件测试中。</p>
+<p>4.应该从“小规模”测试开始，并逐步进行“大规模”测试。</p>
+<p>5.穷举测试是不可能的。</p>
+<p>6.为了达到最佳的测试效果，应该由独立的第三方从事测试工作。</p>
+<p>测试任何产品有两种方法：黑盒测试和白盒测试。</p>
+<p>测试步骤</p>
+<p>1.模块测试</p>
+<p>2.子系统测试</p>
+<p>3.系统测试</p>
+<p>4.验收测试</p>
+<p>5.平行运行</p>
+<p>测试阶段的信息流</p>
+<p>1.软件配置，包括需求说明书、设计说明书和源程序清单等。</p>
+<p>2.测试配置，包括测试计划和测试方案。</p>
+<p>如果经常出现要求修改设计的严重错误，那么软件的质量和可靠性是值得怀疑的。</p>
+<p>反之应该考虑两种可能：1.软件的可靠性是可以接受的；2.所进行的测试尚不足以发现严重的错误。</p>
+<p>软件可靠性模型使用错误率数据估计将来出现错误的情况，并进而对软件可靠性进行预测。</p>
+<p>单元测试</p>
+<p>在单元测试期间着重从下述5个方面对模块进行测试。</p>
+<p>1.模块接口</p>
+<p>2.局部数据结构</p>
+<p>3.重要的执行通路</p>
+<p>4.出错处理通路</p>
+<p>5.边界条件。</p>
+<p>代码审查</p>
+<p>人工测试源程序可以由程序的编写者本人非正式地进行，也可以由审查小组正式进行。后者称为代码审查。</p>
+<p>组成人员：1.组长，应该是一个很有能力的程序员，而且没有直接参与这项工程。2.程序的设计者。3.程序的编写者。4.程序的测试者。</p>
+<p>模块并不是一个独立的程序，因此必须为每个单元测试开发驱动软件和(或)存根软件。通常驱动程序也就是一个“主程序”，它接收测试数据，把这些数据传送给被测试的模块，并且印出有关的结果。存根程序代替被测试的模块所调用的模块。它使用被它代替的模块的接口，可能做最少量的数据操作，印出对入口的检验或操作结果，并且把控制归还给调用它的模块。</p>
+<p>集成测试</p>
+<p>集成测试是测试和组装软件的系统化技术。</p>
+<p>由模块组装成程序时有两种方法。</p>
+<p>非渐增式测试方法：先分别测试每个模块，再把所有模块按设计要求放在一起结合成所要的程序。</p>
+<p>一下子把所有模块放在一起，并把庞大的程序作为一个整体来测试，测试者面对的情况十分复杂。改正错误更是极端苦难，因为在庞大的程序中想要诊断定位一个错误是非常困难的。</p>
+<p>渐增式测试：把下一个要测试的模块同已经测试好的那些模块结合起来进行测试，测试完以后再把下一个应该测试的模块结合进来测试。</p>
+<p>它把程序划分成小段来构造和测试，在这个过程中比较容易定位和改正错误；对接口可以进行更彻底的测试；可以使用系统化的测试方法。</p>
+<p>目前普遍采用渐增式测试方法。</p>
+<p>使用渐增方式时，有自顶向下和自底向上两种集成策略。</p>
+<p>1.自顶向下集成</p>
+<p>自顶向下集成方式是一个日益为人们广泛采用的测试和组装软件的途径。从主控制模块开始，沿着程序的控制层次向下移动，逐渐把各个模块结合起来。在把附属于主控制模块的那些模块组装待程序结构中去时，或者使用深度优先的策略，或者使用宽度优先的策略。</p>
+<p>2.自底向上集成</p>
+<p>自底向上测试从“原子”模块（即在软件结构最低层的模块）开始组装和测试。因为是从底部向上结合模块，总能得到所需的下层模块处理功能，所以不需要存根程序。</p>
+<p>步骤：</p>
+<p>第一步，把低层模块组合成实现某个特定的软件子功能的族。</p>
+<p>第二步，写一个驱动程序(用于测试的控制程序)，协调测试数据的输入和输出。</p>
+<p>第三步，对由模块组成的子功能族进行测试。</p>
+<p>第四步，去掉驱动程序，沿软件结构自下向上移动，把子功能族组合起来形成更大的子功能族。</p>
+<p>回归测试</p>
+<p>在集成测试过程中每当一个新模块结合进来时，程序就发生了变化：建立了新的数据流路径，可能出现了新的I/O操作，激活了新的控制逻辑。重新执行已经做过的测试的某个子集，以保证上述这些变化没有带来非预期的副作用。</p>
+<p>回归测试集包括3类不同的测试用例：</p>
+<p>1.检测软件全部功能的代表性测试用例。</p>
+<p>2.专门针对可能受修改影响的软件功能的附加测试。</p>
+<p>3.针对被修改过的软件成分的测试。</p>
+<p>确认测试</p>
+<p>确认测试也成为验收测试，它的目标是验证软件的有效性。</p>
+<p>确认测试必须有用户积极参与，或者以用户为主进行。用户应该参与月设计测试方案。确认测试通常使用黑盒测试法。</p>
+<p>测试计划：包括要进行的测试的种类及进度安排。</p>
+<p>测试过程：规定了用来检测软件是否与需求一致的测试方案。</p>
+<p>有下述两种可能的结果</p>
+<p>1.功能和性能与用户要求一致，软件是可以接受的。</p>
+<p>2.功能和性能与用户要求有差距。</p>
+<p>确认测试的一个重要内容是复查软件配置。保证软件配置的所有成分都齐全，质量符合要求，文档与程序完全一致，具有完成软件维护所必须的细节，而且已经编好目录。</p>
+<p>如果一个软件是为许多客户开发的，那么使用Alpha测试和Beta测试。</p>
+<p>Alpha测试：由用户在开发者的场所进行，并且在开发者对用户的“指导”下进行测试，Alpha测试是在受控的环境中进行的。</p>
+<p>Beta测试：由软件的最终用户们在一个或多个客户场所进行。</p>
+<p>白盒测试技术：</p>
+<p>设计测试方案的基本目标是，确定一组最可能发现某个错误或某类错误的测试数据。</p>
+<p>1.逻辑覆盖</p>
+<p>语句覆盖；判定覆盖；条件覆盖；判定/条件覆盖；条件组合覆盖；点覆盖；边覆盖；路径覆盖；</p>
+<p>2.控制结构测试</p>
+<p>基本路径测试；条件测试；循环测试；</p>
+<p>黑盒测试</p>
+<p>黑盒测试力图发现的错误：1.功能不正或遗漏了功能；2.界面错误；3.数据结构错误或外部数据库访问错误；4.性能错误；5.初始化和终止错误。</p>
+<p>应该考虑的问题：</p>
+<p>1.怎样测试功能的有效性？</p>
+<p>2.哪些类型的输入可构成好测试用例？</p>
+<p>3.系统是否对特定的输入值特别敏感？</p>
+<p>4.怎样划定数据类的边界？</p>
+<p>5.系统能够承受什么样的数据率和数据量？</p>
+<p>6.数据的特定组合将对系统运行产生什么影响？</p>
+<p>测试用例集：</p>
+<p>1.所设计出的测试用例能够减少为达到合理测试所需要设计的测试用例的总数。</p>
+<p>2.所设计出的测试用例能够告诉人们，是否存在某些类型的错误，而不是仅仅指出与特定测试相关的错误存在。</p>
+<p>有哪些技术？</p>
+<p>1.等价划分。</p>
+<p>2.边界值分析。</p>
+<p>3.错误推测。</p>
+<p>调试</p>
+<p>调试的目标是寻找软件错误的原因并改正错误。</p>
+<p>1.蛮干法；2.回溯法；3.原因排除法。</p>
+<p>测试阶段的根本目标是消除错误，保证软件可靠性。</p>
+<p>软件可靠性是程序在给定的时间间隔内，按照规格说明书的规定成功地运行的概率。</p>
+<p>软件可用性是程序在给定的时间点，按照规格说明书的规定，成功地运行的概率。</p>
+<p>引入平均无故障时间和平均维修时间。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/软件工程导论-详细设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/软件工程导论-详细设计/" itemprop="url">
+                  软件工程导论-详细设计
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:28" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:28+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>详细设计的根本目标是确定应该怎样具体地实现所要求的系统，从而在编码阶段可以把这个描述直接翻译成用某种程序设计语言书写的程序。</p>
+<p>程序的”读者”有两个，那就是计算机和人，因此，衡量程序的质量不仅要看它的逻辑是否正确，性能是否满足要求，更主要的是要看它是否容易阅读和理解。结构程序设计使实现上述目标的关键技术，因此是详细设计的逻辑基础。</p>
+<p>结构程序设计使尽可能少用GO TO语句的程序设计方法。最好仅在检测出错误时才使用GO TO语句，而且应该总是使用前向GO TO语句。</p>
+<p>人机界面设计使接口设计的一个重要的组成部分，对于交互式系统来说，人机界面设计和数据设计、体系结构设计及过程设计一样重要。</p>
+<p>在设计人机界面的过程中，几乎总会遇到下述4个问题：系统响应时间、用户帮助设施、出错信息处理和命令交互。</p>
+<p>用户界面设计是一个迭代的过程：先创建设计模型，再用原型事项这个设计模型，并有用户试用和评估，然后根据用户意见进行修改。</p>
+<p>也可以在创建原型之前就对用户界面的设计质量进行初步评估。如果能及早发现并改正潜在的问题，就可以减少评估周期的执行次数，从而缩短软件的开发时间。可以用下述评估标准对设计进行早期复查。</p>
+<p>1.系统及其界面的规格说明书的长度和复杂程度，预示了用户学习使用该系统所需要的工作量。</p>
+<p>2.命令或动作的数量、命令的平均参数个数或动作中单个操作的个数，预示了系统的交互时间和总体效率。</p>
+<p>3.设计模型中包含的动作、命令和系统状态的数量，预示了用户学习使用该系统时需要记忆的内容的多少。</p>
+<p>4.界面风格、帮助设施和出错处理协议，预示了界面的复杂程度及用户接收该界面的程度。</p>
+<p>描述程序处理过程的工具称为过程设计工具，它们可以分为图形、表格和语言3类。不论是哪类工具，对它们的基本要求都是能提供对设计的无歧义的描述，也就是应该能指明控制流程、处理功能、数据组织及其他方面的实现细节，从而在编码阶段能把对设计的描述直接翻译成程序代码。可以采用程序流程图、盒图、PAD图、判定表、判定树、过程设计语言PDL。</p>
+<p>计算机软件本质上是信息处理系统，因此，可以根据软件所处理的信息的特征来设计软件。面向数据结构的设计方法最终目标是得出对程序处理过程的描述。这种设计方法并不明显地使用软件结构的概念，模块是设计过程的副产品，对于模块独立原理也没有给予应有的重视。因此，这种方法最适合于详细设计阶段使用。Jackson方法和Warnier方法是最著名的两个面向数据结构的设计方法。</p>
+<p>程序复杂程度的定量度量</p>
+<p>定量度量程序复杂程度的方法很有价值：把程序的复杂程度乘以适当常数即可估算出软件中错误的数量以及软件开发需要用的工作量，定量度量的结果可以用来比较两个不同的设计或两个不同算法的优劣；程序的定量的复杂程度可以作为模块规模的精确限度。用的比较广泛的有McCabe方法和Halstead方法。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/敏捷软件开发Scrum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/敏捷软件开发Scrum/" itemprop="url">
+                  敏捷软件开发Scrum
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:27" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:27+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>个体和互动高于流程和工具<br>工作的软件高于详尽的文档<br>客户合作高于合同谈判<br>响应变化高于遵循计划<br>也就是说，尽管右项有其价值，我们更重视左项的价值。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/组织行为学/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/组织行为学/" itemprop="url">
+                  组织行为学
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:27" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:27+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 08:01:28" itemprop="dateModified" datetime="2020-05-17T08:01:28+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/战略管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/战略管理/" itemprop="url">
+                  战略管理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:27" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:27+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 08:01:28" itemprop="dateModified" datetime="2020-05-17T08:01:28+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/信息系统项目管理师-介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/信息系统项目管理师-介绍/" itemprop="url">
+                  信息系统项目管理师-介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:27" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:27+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><blockquote>
+<p>项目是用有限的资源、有限的时间为特定客户完成特定目标的一次性工作。</p>
+</blockquote>
+<p>资源：完成项目所需要的人、财、物。<br>时间：明确的开始和结束时间。<br>客户：提供资金、确定需求并拥有项目成果的组织或个人。<br>目标：满足要求的产品、服务和成果。</p>
+<p>项目的特点：临时性、独特性和渐进性。</p>
+<ol>
+<li>临时性<br>临时性是指每一个项目都有确定的开始和结束。<br>此外，临时性一般不适用于项目所产生的产品、服务或成果。大多数项目是为了得到持久的结果。</li>
+<li>独特的产品、服务或成果<br>独特是项目可交付成果的一种重要特征，例如，办公楼已经建造了成千上万做，单其中每一座都是独特的-不同的业主、不同的设计、不同的地点、不同的承建人等。</li>
+<li>渐进明细<br>渐进明细是项目逐步完成的过程。渐进明细意味着分步、连续的积累。例如，在项目的早期项目范围的说明是粗略的，随着项目团队对目标和可交付成果的理解更完整，更深入时，项目的范围也就更具体。<br>项目规格说明书的渐进明细务必要与项目范围的恰当定义谨慎地协调起来。<strong>如果项目范围，即需要完成的任务规定的恰如其分，则在规格说明书的渐进明细过程中，项目范围仍应保持控制。</strong></li>
+</ol>
+<h3 id="信息项目的特点"><a href="#信息项目的特点" class="headerlink" title="信息项目的特点"></a>信息项目的特点</h3><blockquote>
+<p>信息系统项目是根据用户需求，优选各种技术和产品，进行设计开发，将各个分离的“信息孤岛”连接成为一个完整、可靠、经济和有效的整体，并使之能彼此协调工作，发挥整体效益，达到整体优化的目的。</p>
+</blockquote>
+<p>现在的信息系统已不只是为用户提供信息共享的功能，而是要整合各种资源，在满足用户需求的基础上，提高用户的投资效率、管理效率和经营效率，最终<strong>帮助用户获取更大的利润</strong>。</p>
+<p>信息系统是以信息的集成为目标，功能的集成为结构，平台的集成为基础，人的集成为保证。不仅要在技术上实现客户的需求，还要对客户投资的实用性和有效性进行分析。开发商要向客户提供具有针对性的整合应用解决方案，这就要求开发商除了要有IT方面的技术外，必须要有较丰富的行业经验。</p>
+<h3 id="项目管理"><a href="#项目管理" class="headerlink" title="项目管理"></a>项目管理</h3><blockquote>
+<p>项目管理就是把各种知识、技能、手段和技术应用于项目活动之中，以达到项目的要求。</p>
+</blockquote>
+<p>管理一个项目包括：</p>
+<ul>
+<li>识别要求。</li>
+<li>确定清楚而又能够实现的目标。</li>
+<li>权衡质量、范围、时间和成本方面互不相让的要求，使技术规定说明书、计划和方法适用于各种各样利害关系者的不同需求与期望。</li>
+</ul>
+<p>有效的管理要求项目管理组至少能理解和使用以下5方面的专门知识领域：</p>
+<ul>
+<li>项目管理知识体系。</li>
+<li>应用领域的知识、标准和规定。<ul>
+<li>标准是“一直同意建立并由公认的机构批准的文件，该团队提供通用的和可重复使用的规则、指南、活动或其结果的特征，目的是在特定的背景下达到最佳的秩序。</li>
+<li>规则是政府强制的要求，它制定了产品、过程或服务的特征。建筑法规是规则的一个例子。</li>
+</ul>
+</li>
+<li>项目环境知识。</li>
+<li>通用的管理知识和技能。</li>
+<li>软技能(处理人际关系技能)。</li>
+</ul>
+<p>国际化组织以PMBOK(项目管理的知识体系)为框架，制定了ISO10006关于项目管理的标准。<br>包括，<br>动态的项目管理5大过程</p>
+<ul>
+<li>启动过程组。</li>
+<li>规划过程组。</li>
+<li>执行过程组。</li>
+<li>监控过程组。</li>
+<li>收尾过程组。</li>
+</ul>
+<p>静态的项目管理9大知识领域</p>
+<ul>
+<li>范围管理。</li>
+<li>时间管理。</li>
+<li>成本管理。</li>
+<li>质量管理。</li>
+<li>人力资源管理。</li>
+<li>沟通管理。</li>
+<li>采购管理。</li>
+<li>风险管理。</li>
+<li>整体管理。</li>
+</ul>
+<h3 id="项目管理高级话题"><a href="#项目管理高级话题" class="headerlink" title="项目管理高级话题"></a>项目管理高级话题</h3><p>在更广泛的背景下，项目管理包括相关的工作如大项目和项目组合管理。它们都应用了一些基本技能以管理项目，只是执行的层面不同。通常，战略计划、项目组合、大项目、项目、子项目是有层次的，大项目包含几个相关的项目，并共同为战略计划的完成做出贡献。</p>
+<h3 id="项目管理的产生和发展"><a href="#项目管理的产生和发展" class="headerlink" title="项目管理的产生和发展"></a>项目管理的产生和发展</h3><h4 id="产生的原因"><a href="#产生的原因" class="headerlink" title="产生的原因"></a>产生的原因</h4><ol>
+<li>适应现代产品的创新速度。</li>
+<li>适应现代的复杂项目系统。</li>
+<li>适应以用户满意为核心的服务理念。<h3 id="发展的方向"><a href="#发展的方向" class="headerlink" title="发展的方向"></a>发展的方向</h3></li>
+<li>向学科化方向发展。</li>
+<li>向实用化方向发展。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/管理/管理/软件工程导论-总体设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/管理/管理/软件工程导论-总体设计/" itemprop="url">
+                  软件工程导论-总体设计
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-12 19:50:27" itemprop="dateCreated datePublished" datetime="2018-11-12T19:50:27+00:00">2018-11-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/管理/" itemprop="url" rel="index"><span itemprop="name">管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1  总体设计<br>总体设计通常由两个主要阶段组成：<br>系统设计阶段，确定系统的具体实现方案；<br>结构设计阶段，确定软件结构。</p>
+<p>总体设计的9个步骤：<br>1.设想供选择的方案<br>       考虑各种可能的实现方案，一般将需求分析阶段得出的数据流图作为出发点，把数据流图中的处理分组的各种可能性，抛弃在技术上行不通的分组方法，余下的分组方法代表可能的实现策略，并且可以启示供选择的物理系统。<br>2.选取合理的方案<br>       选取若干个合理的方案，通常至少选取低成本/中成本/高成本的3种方案。<br>       每个方案准备四份资料(系统流程图，组成系统的物理元素清单，成本/效益分析，实现这个系统的进度计划)。<br>3.推荐最佳方案<br>       从合理方案中，推荐一个最佳的方案，并且为这个方案制定详细的实现计划。<br>4.功能分解<br>       从实现角度把复杂的功能进一步分解，一般说来，经过分解之后应该使每个功能对大多数程序员而言都是明显易懂的。功能分解导致数据流图的进一步细化。<br>5.设计软件结构<br>       把模块组织成良好的层次系统，顶层模块调用它的下层模块以实现程序的完整功能。<br>6.设计数据库<br>7.制定测试计划<br>       考虑测试问题，在设计的时候注意提高软件的可测试性。<br>8.书写文档<br>       系统说明：主要内容包括用系统流程图描绘的系统构成方案，组成系统的物理元素清单，成本/效益分析；对最佳方案的概括描述，精化的数据流图，用层次图或结构图描绘的软件结构，用IPO图或其他工具简要描述的各个模块的算法，模块间的接口关系，以及需求、功能和模块三者之间的交叉参照关系等。<br>       用户手册：根据总体设计阶段的结果，修改更正在需求分析阶段产生的初步的用户手册。<br>       测试计划：包括测试策略，测试方案，预期的测试结果，测试进度计划等等。<br>       详细的实现计划：<br>       数据库设计结果：<br>9.审查和复查<br>       技术审查，然后由客户从管理角度进行复查。</p>
+<p>2  设计原理<br>2.1  模块化<br>      模块是由边界元素限定的相邻程序元素的序列，而且有一个总体标识符代表它。按照模块的定义，过程、函数、子程序和宏等，都可作为模块。面向对象方法学中的对象是模块，对象内的方法也是模块。<br>      每个程序都相应地有一最适当的模块数目M，使得系统的开发成本最小。当模块数目增加时每个模块的规模将减小，开发单个模块需要的成本确实减少了；但是，随着模块数目增加，设计模块间接口所需要的工作量也将增加。<br>2.2  抽象<br>      抽象就是抽出事物的本质特性而暂时不考虑它们的细节。<br>      由于人类思维能力的限制，如果每次面临的元素太多，是不可能产生精确思维的。处理复杂系统的唯一有效的方法是用层次的方式构造和分析它。<br>      当考虑对任何问题的模块化解法时。可以提出许多抽象的层次。在抽象的最高层次使用问题环境的语言，以概括的方式叙述问题的解法；在较低抽象层次采用更过程化的方法，把面向问题的术语和面向实现的术语结合起来叙述问题的解法；最后，在最低的抽象层次用可以直接实现的方式叙述问题的解法。<br>2.3  逐步求精<br>      逐步求精是人类解决复杂问题时采用的基本方法。为了能集中精力解决主要问题而尽量延迟对问题细节的考虑。<br>      Miller法则：一个人在任何时候都只能把注意力集中在(7±2)个知识块上。<br>      逐步求精是一种自顶向下的设计策略，按照这种设计策略，程序的体系结构是通过逐步精化处理过程的层次而设计出来的。<br>      抽象与求精是一对互补的概念。抽象使得设计者能够说明过程和数据，同时却忽略了底层细节。求精则帮助设计者在设计过程中桌布揭示出低层细节。<br>2.4  信息隐藏和局部化<br>      信息隐藏原理指出：应该这样设计和确定模块，使得一个模块内包含的信息(过程和数据)对于不需要这些信息的模块来说，是不能访问的。<br>      局部化是指把一些关系密切的软件元素物理地放得彼此靠近。</p>
+<p>3  耦合和内聚<br>      耦合衡量不同模块彼此间相互依赖(连接)的紧密程度；内聚衡量一个模块内部各个元素彼此结合的紧密程度。<br>3.1  耦合<br>      如果两个模块中的每一个都能独立地工作而不需要另一个模块的存在，那么它们彼此完全独立，这意味着模块间无任何连接，耦合程度最低。<br>      数据耦合：低耦合，如果两个模块彼此间通过参数交换信息，而且交换的信息仅仅是数据，那么这种耦合称为数据耦合。系统中必须存在这种耦合，因为只用当某些模块的输出数据作为另一些模块的输入数据时，系统才能完成有价值的功能。<br>      控制耦合：中等耦合，如果传递的信息中有控制信息(尽管有时这种控制信息以数据的形式出现)，则称为控制耦合。<br>      特征耦合：如果被调用的模块需要使用作为参数传递进来的数据结构中的所有元素，那么，把整个数据结构作为参数传递就是完全正确的。但是，当把整个数据结构作为参数传递而被调用的模块只需要使用其中一部分数据元素时，就出现了特征耦合。在这种情况下，被调用的模块可以使用的数据多余它确实需要的数据，这将导致对数据的访问失去控制，从而给计算机犯罪提供了机会。<br>      公共环境耦合：当两个或多个模块通过一个公共数据环境相互作用时，它们之间的耦合成为公共环境耦合。公共环境耦合的负责程度随耦合的模块个数而变化，当耦合的模块个数增加时复杂程度显著增加。<br>      内容耦合：最高程度的耦合。一个模块方位另一个模块的内部数据。一个模块不通过正常入口而转到另一个模块的内部。两个模块有一部分程序代码重叠(只可能出现在汇编程序中)。一个模块有多个入口(这意味着一个模块有几种功能)。<br>      尽量使用数据耦合，少用控制耦合和特征耦合，限制公共环境耦合的范围，完全不用内容耦合。</p>
+<p>3.2  内聚<br>      内聚标识着一个模块内各个元素彼此结合的紧密程度，它是信息隐藏和局部化概念的自然扩展。<br>      内聚和耦合是密切相关的，模块内的高内聚往往意味着模块间的耦合。内聚和耦合是进行模块化设计的有力工具，但是实践表明内聚更重要，应该把注意力集中到提高模块的内聚程度上。</p>
+<p>低内聚有如下几类：<br>偶然内聚：如果一个模块完成一组任务，这些任务彼此间即时有关系，关系也是很松散，就叫做偶然内聚。<br>逻辑内聚：如果一个模块完成的任务在逻辑上属于相同或相似的一类。<br>时间内聚：如果一个模块包含的任务必须在同一段时间内完执行。</p>
+<p>中内聚有两类：<br>过程内聚：如果一个模块内的处理元素是相关的，而且必须以特定次序执行。<br>通信内聚：如果模块中所有元素都使用同一个输入数据和(或)产生同一个输出数据。</p>
+<p>高内聚有两类：<br>顺序内聚：如果一个模块内的处理元素和同一个功能密切相关，而且这些处理必须顺序执行。<br>功能内聚：如果模块内所有处理元素属于一个整体，完成一个单一的功能。</p>
+<p>|功能内聚|10分|时间内聚|3分|<br>|顺序内聚|9分    |逻辑内聚|1分|<br>|通信内聚|7分    |偶然内聚|0分|<br>|过程内聚|5分    |||</p>
+<p>4  启发规则<br>1.改进软件结果提高模块独立性。<br>2.模块规模应该适中。<br>3.深度、宽度、扇出和扇入都应适当。<br>4.模块的作用域应该在控制域之内。<br>5.力争降低模块接口的复杂程度。<br>6.设计单入口单出口的模块。<br>7.模块功能应该可以预测。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Paul Jiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">212</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yufeng.info/" title="褚霸" target="_blank">褚霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://agentzh.org/" title="章亦春" target="_blank">章亦春</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://martinfowler.com/" title="Martin Fowler" target="_blank">Martin Fowler</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Paul Jiang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

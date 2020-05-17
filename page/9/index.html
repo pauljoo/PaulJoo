@@ -1,0 +1,3040 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+<script src="https://www.xpanda.info/echarts/echarts.min.js"></script>
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Paul Jiang&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/9/index.html">
+<meta property="og:site_name" content="Paul Jiang&#39;s Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Paul Jiang&#39;s Blog">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/9/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Paul Jiang's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?491c3ccef3fc6b3b766f88ca5d0e4d62";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Paul Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/面向模式的软件架构-Layers模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/面向模式的软件架构-Layers模式/" itemprop="url">
+                  面向模式的软件架构-Layers模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Layers有助于将应用程序划分为多组子任务，其中每组子任务都位于特定抽象层。</p>
+</blockquote>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>需要分解的大型系统</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>假设你要设计一个系统，其主要特征是需要同时解决高层问题和低层问题，且高层操作依赖于低层操作。在这个系统中，有些部分负责处理低层问题，如硬件陷阱、传感器输入等。在另一端可能有用户可见的功能(如游戏的界面)或高层策略(如电话计费)。在典型的通信过程中，请求从高层向低层传输，而响应、到来的数据及事件通知沿相反的方向传输。</p>
+<hr>
+<p>在这种情况下，需要平衡下述作用力。</p>
+<ol>
+<li>以后修改源代码不会波及整个系统。</li>
+<li>接口稳定，甚至遵守标准组织制定的标准。</li>
+<li>系统的各个部分都可更换。</li>
+<li>未来可能需要打造其他系统，这些系统与当前设计的系统面临着相同的低层问题。</li>
+<li>应将类似的职责编组，让系统更容易理解和维护。</li>
+<li>根本没有所有的标准组件粒度。</li>
+<li>复杂的组件需要进一步分解。</li>
+<li>跨越组件边界可能影响性能，例如，必须跨越多个组件边界传输大量数据时。</li>
+<li>系统将由一个程序员团队打造，因此分工必须明确。</li>
+</ol>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>在结构方面，Layers模式的主要特征是，第J+1层只使用第J层的服务，层之间没有其他直接依赖关系。这种结构类似于栈，每层都将下面的各层保护起来，禁止上面的层直接访问它们。<br>|客户端|<br>|-|<br>|第N层|<br>|第N-1层|<br>|…|<br>|第1层|</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
+<li><p>定义将任务划分到不同层的抽象准则。该准则通常是离平台的概念距离。<br>在真正的软件开发中，大家通常结合使用多种抽象准则。例如，根据离硬件的距离划分较低的层，按概念复杂度划分较高的层。<br>例如，<br>||<br>|–|<br>|用户可以看到的元素|<br>|具体的应用程序模块|<br>|通用服务层|<br>|操作系统接口层|<br>|操作系统|<br>|硬件|</p>
+</li>
+<li><p>根据抽象准则确定抽象层级数。层数太多可能带来不必要的开销，层数太少又可能导致结构不清晰。</p>
+</li>
+<li>给每层命名并分派任务。最高层的任务就是整个系统要完成的任务，由客户指定。其他各层的任务是辅佐上一层。</li>
+<li>规范服务。最重要的实现原则是相邻界限分明，即任何组件都不跨越多层。</li>
+<li>完善层次划分。反复执行第1～4步。如果不考虑抽象准则导致的层及其服务，通常无法准确地定义抽象准则。另外，先定义组件和服务，再根据它们之间的使用关系拼凑出分层结构的做法通常是错误的。由于这样的结构没有反映固有的分层原则，维护系统时很可能破坏原有的架构。例如，新组件可能使用多层提供的服务，违背严格分层的策略。<br>解决之道是反复执行前4步，直到分层结构自然而稳定。</li>
+<li>规范每层的接口。如果对第J+1层来说，第J层应该算是“黑盒”，就应设计一个统一接口，该接口提供第J层的所有服务，还可能将其封装到一个Facade对象中。</li>
+<li>确定各层的结构。传统上，重点是确保层间关系合理，而各层内部却随心所欲，其结果是混乱不堪。对于复杂的层，应将其划分为多个组件，进行这种划分时粒度更细的模式可提供帮助。</li>
+<li>规范相邻层之间的通信。在层间通信方面，最常用的机制是推模型:第J层调用第J-1层的服务时，随服务调用一起传递所需的信息。与这种模型相反的是拉模型，指的是下层根据自己的判断从上层那取回信息。然而，拉模型可能增加当前层对上一层的依赖关系，要避免拉模型导致的下层对上层的依赖，可使用回调。</li>
+<li>将相邻层解耦。通常上一层知道下一层，但下一层不知道其用户的身份。这意味着只存在单向耦合:修改第J层时，不用考虑第J+1层，条件是被修改的服务的接口和语义保持不变。<br>为支持自下而上的通信，可使用回调，并保留自上而下的单向耦合。使用回调时，上层向下层注册回调函数。在下层向上层发送的事件固定时，这种方式特别有效。<br>还可在一定程度上降低上层对下层的依赖，根据接口编写上层的代码，让上层不依赖于下层的具体实现。<strong>这里由主程序负责在层之间建立“连接”，但这种工作通常由连接管理组件统一管理。</strong><br>对于需要同时向上和向下传递消息的通信栈，显示地将下层关联到上层通常更佳。</li>
+<li>制定错误处理策略。对分层架构而言，处理错误的代价可能非常高，无论从处理时间还是编程工作量的角度来说都如此。错误发生后，要么在当前层进行处理，要么转给上一层。如果采用第二种做法，当前层必须将错误转换为上一层能够明白的错误描述。<strong>一般说来，应尽可能在当前层处理错误，以免高层包含大量处理众多不同错误的代码。</strong></li>
+</ol>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>优点</p>
+<ol>
+<li>各层可重用</li>
+<li>支持标准化。一个著名的标准化接口是POSIX编程接口。</li>
+<li>限制了依赖关系的范围。</li>
+<li>可更换性。<br>缺点</li>
+<li>行为变化可能引发雪崩效应。一层的行为发生变化可能引发严重的问题。如果为完成局部调整，必须对很多层做大量修改，那么分层就成了缺点。</li>
+<li>效率低下。</li>
+<li>不必要的工作。</li>
+<li>难以确定正确的层次粒度。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/面向模式的软件架构-Blackboard模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/面向模式的软件架构-Blackboard模式/" itemprop="url">
+                  面向模式的软件架构-Blackboard模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Blackboard架构模式对还未找到确定解决策略的问题很有帮助。在Blackboard模式中，多个专业子系统通过集思广益，获得可能的部分解或近似解。</p>
+</blockquote>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>未找到或找不到确定解决之道的不成熟领域。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Blackboard模式解决没有可行而确定的解决方案将原始数据转换为高级数据结构(如图表或英语词组)。存在这种问题的领域包括视觉识别、图像识别、语音识别和监视等。这种问题具有如下特点：可分解成多个子问题，但每个子问题都属于不同的专业领域。<br>对于这种问题，影响其解决方案的作用力如下。</p>
+<ul>
+<li>不可能在合理的时间内遍历整个解空间。</li>
+<li>鉴于领域不成熟，可能需要对同一个子任务尝试不同的算法。</li>
+<li>子问题的算法各不相同。</li>
+<li>输入、中间结果和最终结果的表示方式各不相同，而不同算法是根据不同范式实现的。</li>
+<li>一个算法通常使用另一个算法的结果。</li>
+<li>涉及不可靠的数据和近似解。</li>
+<li>算法的执行顺序不确定时还可能要求支持并行性。</li>
+</ul>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>Blackboard架构背后的理念是，一系列独立的程序携手合作，致力于处理同一个数据结构。<br>在解决问题的过程中，系统通过合并、修正或否决部分解来完成工作。每个部分解都针对一个子问题，是这个子问题的最终解在特定阶段的表现形式。所有的可能解构成解空间，并被组织成多个抽象层级，其中最低层为输入的内部表示，最高层包含系统要解决的整个问题的可能解。<br>之所以使用名称“黑板”(blackboard)，是因为它让人想起专家们站在黑板前协作解决问题的情形。专家们通常自行决定截下来该由谁来到黑板前，而在这里介绍的模式中，如果有多个程序都能提供帮助，将由调停者(moderator)组件决定这些程序的执行顺序。</p>
+<p>###结构<br>对系统进行划分，使其包含一个黑板组件、一系列知识源以及一个控制组件。<br>黑板为中央数据存储区，解空间中的元素及控制数据都存储在这里。黑板提供了一个接口，让所有知识源都能够对其进行读写。<br>每个知识源都是一个独立的子系统，解决整个问题的特定方面。<br>控制组件运行一个监视黑板内容变化的循环，并决定接下来采取什么措施。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">控制-&gt;&gt;分段:execCondition</span><br><span class="line">控制-&gt;&gt;音节生成:execCondition</span><br><span class="line">控制-&gt;&gt;单词生成:execCondition</span><br><span class="line">分段-&gt;&gt;黑板:检查</span><br><span class="line">音节生成-&gt;&gt;黑板:检查</span><br><span class="line">单词生成-&gt;&gt;黑板:检查</span><br></pre></td></tr></table></figure>
+<ol>
+<li>定义问题。</li>
+<li>定义问题的解空间。我们将解分为中间解和顶级解，还将其分为部分解和完整解。顶级解位于最高抽象层级，其他层级的解为中间解。完整解是整个问题的答案，而部分解是部分问题的答案。</li>
+<li>将求解过程分为如下步骤：</li>
+</ol>
+<ul>
+<li>定义如何将解转换为上一层级的解。</li>
+<li>描绘如何作出同一抽象层级的推测。</li>
+<li>详细说明如何从其他层级寻找证据，以证实做出的推测。</li>
+<li>指出可利用什么样的知识将部分解空间排除在外。</li>
+</ul>
+<ol start="4">
+<li>根据子任务将知识划分为专业知识源。</li>
+<li>定义黑板的词表。</li>
+<li>规范系统的控制机制。</li>
+<li>实现知识源。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/软件构架实践-质量属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/软件构架实践-质量属性/" itemprop="url">
+                  软件构架实践-质量属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="质量属性场景"><a href="#质量属性场景" class="headerlink" title="质量属性场景"></a>质量属性场景</h2><p>质量属性场景是一种面向特定的质量属性的需求。它由以下6部分组成：</p>
+<ul>
+<li>刺激源：某个生成该刺激的实体（人、计算机系统或任何其他激励器）。</li>
+<li>刺激：该刺激是当刺激到达系统时需要考虑的条件。</li>
+<li>环境：该刺激在某些条件内发生。当刺激发生时，系统可能处于过载，或者正在运行，也可能是其他情况。</li>
+<li>制品：某个制品被刺激。这可能是整个系统，也可能是系统的一部分。</li>
+<li>响应：该响应是在刺激到达后所采取的行动。</li>
+<li>响应度量：当响应发生时，应该能够以某种方式对其进行度量，以对需求进行测试。</li>
+</ul>
+<p>我们将一般的质量属性场景与具体的质量属性场景区分开来，前者是指那些独立于系统，很可能适合任何系统的场景，后者是指适合正在考虑的某个特定系统的场景。</p>
+<img src="/架构/架构/软件构架实践-质量属性/质量属性场景的6个部分.jpg" title="质量属性场景的6个部分">
+<h3 id="可用性的一般场景生成"><a href="#可用性的一般场景生成" class="headerlink" title="可用性的一般场景生成"></a>可用性的一般场景生成</h3><table>
+<thead>
+<tr>
+<th>场景的部分</th>
+<th>可能的值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>源</td>
+<td>系统内部、系统外部</td>
+</tr>
+<tr>
+<td>刺激</td>
+<td>错误：疏忽、崩溃、时间、响应</td>
+</tr>
+<tr>
+<td>制品</td>
+<td>系统的处理器、通信通道、持久存储器、进程</td>
+</tr>
+<tr>
+<td>环境</td>
+<td>正常操作、降级模式</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>系统应该检测时间，并进行如下一个或多个活动：将其记录下来，通知适当的各方，根据已定义的规则禁止导致错误或故障的事件源，在一段预先指定的时间间隔内不可用。</td>
+</tr>
+<tr>
+<td>响应度量</td>
+<td>系统必须可用的时间间隔；可用时间；系统可以在降级模式下运行的时间间隔；修复时间；</td>
+</tr>
+</tbody>
+</table>
+<h3 id="可用性的一般场景"><a href="#可用性的一般场景" class="headerlink" title="可用性的一般场景"></a>可用性的一般场景</h3><img src="/架构/架构/软件构架实践-质量属性/可用性的一般场景.jpg" title="可用性的一般场景">
+<h3 id="可用性的场景样例"><a href="#可用性的场景样例" class="headerlink" title="可用性的场景样例"></a>可用性的场景样例</h3><img src="/架构/架构/软件构架实践-质量属性/可用性的场景样例.jpg" title="可用性的场景样例">
+<h2 id="系统质量属性"><a href="#系统质量属性" class="headerlink" title="系统质量属性"></a>系统质量属性</h2><ol>
+<li>可用性</li>
+</ol>
+<p>可用性所关注的方面包括：如何检测系统故障，系统故障发生的频度，出现故障时会发生什么情况，允许系统有多长时间非正常运行，什么时候可以安全的出现故障，如何防止故障的发生以及发生故障时要求进行哪种通知。</p>
+<ol start="2">
+<li>可修改性</li>
+</ol>
+<p>可修改性是有关变更的成本问题，它提出了两个关注点。</p>
+<ul>
+<li>可以修改什么?可以修改系统的任何方面，最常见的就是系统计算的功能、系统存在的平台、系统运行的环境、系统所展示的质量属性以及其容量。</li>
+<li>任何进行变更以及由谁进行变更?可以在编译期间、构建期间、配置设置迁建或者执行期间改变实现。变更还可以由开发人员、最终用户或系统管理员进行。</li>
+</ul>
+<ol start="3">
+<li>性能</li>
+</ol>
+<p>性能与时间有关。可以用等待时间、处理期限、系统吞吐量、响应抖动、由于系统太忙因而无法做出响应所导致的未处理事件的数量，以及因系统太忙所丢失的数据。</p>
+<ol start="4">
+<li>安全性</li>
+</ol>
+<p>可以把安全性刻画为一个提供认可、机密性、完整性、保证、可用性和审核的系统。</p>
+<ul>
+<li>认可：就是交易不能被交易的任何一方拒绝的属性。这意味着如果你通过Internet订购了某个项目的话，就不能否认。</li>
+<li>机密性：就是未经授权不能访问数据或服务的属性。</li>
+<li>完整性：根据计划来提交数据或服务的属性。自从老师给你分配登记后，等级就没有改变过。</li>
+<li>保证：交易的各方是所声称的人的属性。当客户发送一个信用卡卡号到Internet商家时，该商家正是客户所认为的商家。</li>
+<li>可用性：系统可用于合法用户的属性。拒绝服务供给不会阻碍你订购。</li>
+<li>审核：系统在其内部跟踪活动的属性，跟踪的级别足以对活动进行重构。</li>
+</ul>
+<ol start="5">
+<li>可测试性</li>
+</ol>
+<p>可测试性的响应度量是测试在发现缺陷方面的效率，以及要想达到某个期望的覆盖范围，需要用多长时间进行测试。</p>
+<ol start="6">
+<li>易用性</li>
+</ol>
+<p>易用性关注的是对用户来说完成某个期望任务的容易程度和系统所提供的用户支持的种类。</p>
+<ul>
+<li>学习系统的特性：如果用户不熟悉某个特定的系统或该系统的某一特定方面，那么系统可以如何使学习任务变得更容易。</li>
+<li>有效的使用系统：系统如何提高用户的操作效率。</li>
+<li>将错误的影响降到最低：系统怎样使用户所犯的错误造成的影响最小。</li>
+<li>使系统适应用户的需要：系统如何使用户的任务变得更轻松。</li>
+<li>提高自信和满意度：系统如何使用户却行采取了正确的行动。</li>
+</ul>
+<h2 id="其他系统质量属性"><a href="#其他系统质量属性" class="headerlink" title="其他系统质量属性"></a>其他系统质量属性</h2><p>在其他资料中，还可以发现大量的其他属性。比如可扩充性，可移植性等等。在引用这些质量属性的时候，通过对一般场景的6个部分进行描述即可。</p>
+<h2 id="商业质量属性"><a href="#商业质量属性" class="headerlink" title="商业质量属性"></a>商业质量属性</h2><ol>
+<li>上市时间</li>
+<li>成本和收益</li>
+<li>所希望的系统生命期的长短</li>
+<li>目标市场</li>
+<li>推出计划</li>
+<li>与老系统的集成</li>
+</ol>
+<h2 id="构架质量属性"><a href="#构架质量属性" class="headerlink" title="构架质量属性"></a>构架质量属性</h2><ol>
+<li>概念完整性：在各个层次上统一系统设计的根本指导思想。</li>
+<li>正确性和完整性：构架能够满足系统的各种需求及运行时的资源要求的必要条件。</li>
+<li>可构建性：保证能够由指定的开发小组在规定的时间里及时开发系统，并允许在开发过程中做某些更改的架构属性。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/软件构架实践-构架商业周期/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/软件构架实践-构架商业周期/" itemprop="url">
+                  软件构架实践-构架商业周期
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>软件构架是技术、商业和社会等诸多因素作用的结果，而软件构架的存在反过来又会影响技术、商业和社会环境。</p>
+<h2 id="构架所受的影响"><a href="#构架所受的影响" class="headerlink" title="构架所受的影响"></a>构架所受的影响</h2><ul>
+<li>构架受系统受众的影响</li>
+</ul>
+<p>很多人和组织都对构建软件系统感兴趣。我们把这样的人或组织称为涉众：客户、最终用户、开发人员、项目经理、维护人员以及那些对系统进行市场营销活动的人等等。这些涉众所关注的问题各不相同，但都要求系统能够在他们所关注的方面提供保证或优化。</p>
+<ul>
+<li>构架受开发组织的影响</li>
+</ul>
+<p>组织中是否有足够多的有空闲时间且精通C/S通信的程序员?人员的技能也是一个影响因素，开发进度和预算也会对构架产生影响。</p>
+<ul>
+<li>构架受设计师的素质和经验的影响</li>
+</ul>
+<p>设计构架时所做的各种选择与设计师本人所受的教育或培训背景、对其他成功构架的了解以及对某些性能极佳或极差的系统的了解有关。</p>
+<ul>
+<li>构架受技术环境的影响</li>
+</ul>
+<p>这里所说的技术环境包括行业中的通常做法或在设计师所属专业团体中占主导地位的软件工程技巧。</p>
+<ul>
+<li>影响构架的其他因素</li>
+</ul>
+<h2 id="构架对诸影响因素的反作用"><a href="#构架对诸影响因素的反作用" class="headerlink" title="构架对诸影响因素的反作用"></a>构架对诸影响因素的反作用</h2><p>企业目标、产品需求、设计师的经验、构架和最终系统之间构成带有反馈回路的、可由开发组织实施管理的周期。开发组织对这个周期管理的好，就能够不断成长壮大，拓展其经营范围，充分利用以前在构架和系统构建方面的投资。</p>
+<ul>
+<li>构架影响开发组织的结构</li>
+<li>构架影响开发组织的目标</li>
+<li>构架影响客户对下一个系统的要求</li>
+<li>构架系统的过程丰富了整个开发团体的敬仰</li>
+<li>一些典型的系统会影响并实际改变软件工程的发展，也就是系统开发人员学习和实践的技术环境。</li>
+</ul>
+<h2 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h2><ul>
+<li>为系统构建一个商业案例</li>
+<li>理解系统需求</li>
+<li>创建或选择构架</li>
+<li>将构架编成文档，并与有关各方进行交流</li>
+<li>对此构架进行分析和评价</li>
+<li>根据此构架实现系统</li>
+<li>保证系统实现符合构架的要求</li>
+</ul>
+<h2 id="什么样的架构才算好"><a href="#什么样的架构才算好" class="headerlink" title="什么样的架构才算好"></a>什么样的架构才算好</h2><h3 id="关于过程的建议"><a href="#关于过程的建议" class="headerlink" title="关于过程的建议"></a>关于过程的建议</h3><ul>
+<li>构架的设计应该由一位设计师来完成，或者由一个在某位设计师领导下的小组来完成。</li>
+<li>设计师应全面掌握系统的功能需求，并且应有一份所设计构架应满足的划分了优先级的质量属性列表。</li>
+<li>构架的文档应该完备，至少应有一个静态视图和一个动态视图，应该采用所有人员认可的文档形式，以保证所有涉众都能很容易的理解这些文档。</li>
+<li>应该把架构设计方案交由各涉众传阅，应该让各涉众积极参与设计方案的评审。</li>
+<li>应该对构架认真进行分析，得出可应用的量化度量指标。也应该对质量属性进行正式评估，以避免出现发现问题时为时已晚的情况。</li>
+<li>构架的设计应有助于增量式实现。为此，可先创建一个粗略的、具备雏形但功能最简单的系统，通过把这个骨架系统逐步细化、扩大来得到所期望的系统。</li>
+<li>允许构架带来一定的资源争用，但应该清楚地给出这些资源争用的解决方案，告之于有关各方，并保证这些解决方案切实可行。例如，若网络占用是要考虑的问题，设计师就要为每个开发小组制定出将网络占用减少到最低限度的指导原则。</li>
+</ul>
+<h3 id="关于产品-结构-的建议"><a href="#关于产品-结构-的建议" class="headerlink" title="关于产品(结构)的建议"></a>关于产品(结构)的建议</h3><ul>
+<li>构架应采用定义良好的模块，各模块的功能责任划分应基于信息隐藏和相互独立的原则。</li>
+<li>应该使用特定于每个属性的众所周知的构架战术来实现质量属性。</li>
+<li>构架绝对不可以依赖于某个特定版本的商业产品或工具。</li>
+<li>应将产生数据的模块和使用数据的模块分离开。</li>
+<li>对于并行处理系统，构架应该采用定义良好的进程或任务，它们未必反映模块分解结构。</li>
+<li>每个任务或进程的编写都要考虑到与特定处理器的关系，并保证能够方便的改变这种关系。</li>
+<li>构架应该采用少量的、简单的交互模式。在整个运行过程中，系统的功能应保持一致，这可使系统易于理解，有助于缩短开发时间、提高可靠性、增强可修改性。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/设计模式-适配器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/设计模式-适配器/" itemprop="url">
+                  设计模式-适配器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>将一个类的接口转换成客户希望的另外一个接口。使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
+<p>类适配器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">Class Shape</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    Shape();</span><br><span class="line">    Virtual void BoundingBox(Point&amp; bottomLeft, Point&amp; topRight)const;</span><br><span class="line">    Virtual Manipulator* CreateManipulator() const;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ClassTextView</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    TextView();</span><br><span class="line">    Void GetOrigin(Coord&amp; x, Coord&amp; y) const;</span><br><span class="line">    Void GetExtend(Coord&amp; width, Coord&amp; height) const;</span><br><span class="line">    Virtual bool IsEmpty() const;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ClassTextShape : public Shape, private TextView</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    TextShape();</span><br><span class="line">    Virtual void BoundingBox(Point&amp; bottomLeft, Point&amp; topRight)const;</span><br><span class="line">    Virtual bool IsEmpty() const;</span><br><span class="line">    Virtual Manipulator* CreateManipulator() const;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//对TextView接口进行转换使之匹配Shape</span><br><span class="line">VoidTextShape::BoundingBox(Point&amp; bottomLeft, Point&amp; topRight) const</span><br><span class="line">&#123;</span><br><span class="line">    Coord bottom, left, width, height;</span><br><span class="line"></span><br><span class="line">    GetOrigin(bottom, left);</span><br><span class="line">    GetExtend(width, height);</span><br><span class="line"></span><br><span class="line">    bottomLeft = Point(bottom, left);</span><br><span class="line">    topRight = Point(bottom + height, left + width);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>对象适配器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//对象适配器采用对象组合的方法将具有不同接口的类组合在一起。在该方法中，适配器TextShape维护一个指向TextView的指针</span><br><span class="line">Class TextShape : public Shape</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    TextShape (TextView*);</span><br><span class="line">    Virtual void BoundingBox(Point&amp; bottomLeft, Point&amp; topRight)const;</span><br><span class="line">    Virtual bool IsEmpty() const;</span><br><span class="line">    Virtual Manipulator* CreateManipulator() const;</span><br><span class="line">Private:</span><br><span class="line">    TextView* _text;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">TextShape ::TextShape (TextView*)</span><br><span class="line">&#123;</span><br><span class="line">    _text = t;//初始化</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">VoidTextShape::BoundingBox(Point&amp; bottomLeft, Point&amp; topRight) const</span><br><span class="line">&#123;</span><br><span class="line">    Coord bottom, left, width, height;</span><br><span class="line"></span><br><span class="line">    _text-&gt;GetOrigin(bottom, left);</span><br><span class="line">    _text-&gt;GetExtend(width, height);</span><br><span class="line"></span><br><span class="line">    bottomLeft = Point(bottom, left);</span><br><span class="line"></span><br><span class="line">    topRight = Point(bottom + height, left + width);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/设计模式-装饰/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/设计模式-装饰/" itemprop="url">
+                  设计模式-装饰
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">Class VisualComponent</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    VisualComponent();</span><br><span class="line"></span><br><span class="line">    Virtual void Draw();</span><br><span class="line">    Virtual void Resize();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Class Decorator : public VisualComponent</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    Decorator(VisualComponent*);</span><br><span class="line"></span><br><span class="line">    Virtual void Draw();</span><br><span class="line">    Virtual void Resize();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Void Decorator::Draw()</span><br><span class="line">&#123;</span><br><span class="line">    Return _component-&gt;Draw();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Void Decorator::Resize()</span><br><span class="line">&#123;</span><br><span class="line">    Return _component-&gt;Resize();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Class BorderDecorator : public Decorator</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    BorderDecorator (VisualComponent*, int borderWidth);</span><br><span class="line">    Virtual void Draw();</span><br><span class="line">Private:</span><br><span class="line">    void DrawBorder(int);</span><br><span class="line">Private:</span><br><span class="line">    Int _width;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Void BorderDecorator::Draw()</span><br><span class="line">&#123;</span><br><span class="line">    Decorator::Draw();</span><br><span class="line">    DrawBorder(_width);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/设计模式-组合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/设计模式-组合/" itemprop="url">
+                  设计模式-组合
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>将对象组合成树形结构以表示“部分-整体”的层次结构。使得用户对单个对象和组合对象的使用具有一致性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">Class Equipment</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    Virtual ~Equipment();</span><br><span class="line"></span><br><span class="line">    Const char* Name() &#123; return _name&#125;;</span><br><span class="line"></span><br><span class="line">    Virtual Watt Power();</span><br><span class="line">    Virtual Currency NetPrice();</span><br><span class="line">    Virtual Currency DiscountPrice();</span><br><span class="line"></span><br><span class="line">    Virtual void Add(Equipment*);</span><br><span class="line">    Virtual void Remove(Equipment*);</span><br><span class="line">    Virtual Iterator&lt;Equipment*&gt;* CreateIterator();</span><br><span class="line">Protected:</span><br><span class="line">    Equipment(const char*);</span><br><span class="line">Private:</span><br><span class="line">    Const char* _name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Class FloppyDisk : public Equipment</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    FloppyDisk(const char*);</span><br><span class="line">    Virtual ~FloppyDisk ();</span><br><span class="line"></span><br><span class="line">    Virtual Watt Power();</span><br><span class="line">    Virtual Currency NetPrice();</span><br><span class="line">    Virtual Currency DiscountPrice();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Class CompositeEquipment : public Equipment</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    Virtual ~CompositeEquipment ();</span><br><span class="line"></span><br><span class="line">    Virtual Watt Power();</span><br><span class="line">    Virtual Currency NetPrice();</span><br><span class="line">    Virtual Currency DiscountPrice();</span><br><span class="line"></span><br><span class="line">    Virtual void Add(Equipment*);</span><br><span class="line">    Virtual void Remove(Equipment*);</span><br><span class="line">    Virtual Iterator&lt;Equipment*&gt;* CreateIterator();</span><br><span class="line">Protected:</span><br><span class="line">    CompositeEquipment (const char*);</span><br><span class="line">Private:</span><br><span class="line">    List&lt;Equipment*&gt; _equipment;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Currency CompositeEquipment::NetPrice()</span><br><span class="line">&#123;</span><br><span class="line">    Iterator&lt;Equipment*&gt;* I = CreateIterator();</span><br><span class="line">    Currency total = 0;</span><br><span class="line">    For(i-&gt;First(); !i-&gt;IsDone(); i-&gt;Next())</span><br><span class="line">    &#123;</span><br><span class="line">        Total += i-&gt;CurrentItem()-&gt;NetPrice();</span><br><span class="line">    &#125;</span><br><span class="line">    Delete I;</span><br><span class="line">    Return total;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Class Chassis : public CompositeEquipment </span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    Chassis (const char*);</span><br><span class="line">    Virtual ~Chassis ();</span><br><span class="line"></span><br><span class="line">    Virtual Watt Power();</span><br><span class="line">    Virtual Currency NetPrice();</span><br><span class="line">    Virtual Currency DiscountPrice();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Cabinet* cabinet = new Cabinet();</span><br><span class="line">Chassis* chassis = new Chassis();</span><br><span class="line">Cabinet-&gt;Add(chassis);</span><br><span class="line"></span><br><span class="line">Bus* bus = new Bus(&quot;MCA Bus&quot;);</span><br><span class="line">Bus-&gt;Add(new Card(&quot;16Mbs Token Ring&quot;));</span><br><span class="line"></span><br><span class="line">Chassis-&gt;Add(bus);</span><br><span class="line">Chassis-&gt;Add(new FloppyDisk(&quot;3.5in Floppy&quot;));</span><br><span class="line"></span><br><span class="line">Cout &lt;&lt; &quot;The net price is &quot; &lt;&lt; chassis-&gt;NetPrice() &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/设计模式-生成器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/设计模式-生成器/" itemprop="url">
+                  设计模式-生成器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。</p>
+<p>抽象工厂与生成器相似，主要的区别是生成器模式着重于一步步构造一个复杂对象。而抽象工厂着重于多个系列的产品对象。Builder在最后的一步返回，而对于Abstract Factory来说，产品是立即返回的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Class MazeBuilder</span><br><span class="line">&#123;</span><br><span class="line">Public:</span><br><span class="line">    Virtual void BuildMaze();</span><br><span class="line">    Virtual void BuildRoom(int room);</span><br><span class="line">    Virtual void BuildDoor(int roomFrom, int roomTo);</span><br><span class="line">    Virtual Maze* GetMaze();</span><br><span class="line">Protected:</span><br><span class="line">    MazeBuilder();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Maze*MazeGame::CreateMaze(MazeBuilder&amp; build)</span><br><span class="line">&#123;</span><br><span class="line">    Builder.BuildMaze();</span><br><span class="line">    Builder.BuildRoom(1);</span><br><span class="line">    Builder.BuildRoom(2);</span><br><span class="line">    Builder.BuildDoor(1,2);</span><br><span class="line">    Return builder.GetMaze();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/设计模式-桥接/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/设计模式-桥接/" itemprop="url">
+                  设计模式-桥接
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>将抽象部分与它的实现部分分离，使它们都可以独立地变化。</p>
+<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>当一个抽象可能有多个实现时，通常用继承来协调它们。抽象类定义对该抽象的接口，而具体的子类则用不同方式加以实现。但是此方法有时不够灵活。继承机制将抽象部分与它的实现部分固定在一起，使得难以对抽象部分和实现部分独立地进行修改、扩充和重用。</p>
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><p><code>`</code><br>Class Window<br>{<br>Public:<br>    Window(View<em> contents);<br>    Virtual void DrawContents();<br>    Virual void Open();<br>    Virual void Close();<br>    Virual void Iconify();<br>    Virual void Deiconify();<br>    Virual void SetOrigin(const Point&amp; at);<br>    Virual void SetExtent(const Point&amp; extent);<br>    Virual void Raise();<br>    Virual void Lower();<br>    Virual void DrawLine(const Point&amp;, const Point&amp;);<br>    Virual void DrawRect(const Point&amp;, const Point&amp;);<br>    Virual void DrawPolygon(const Point[], int n);<br>    Virual void DrawText(const char</em>, const Point&amp;);</p>
+<p>Protected:<br>    WindowImp<em> GetWindowImp();<br>    View</em> GetView();<br>Private:<br>    WindowImp<em> _imp;<br>    View</em> _contents;<br>};</p>
+<p>//Window维护一个对WindowImp的引用, WindowImp抽象类定义了一个对底层窗口系统的接口。<br>Class WindowImp<br>{<br>Public:<br>    Virtual void ImpTop() = 0;<br>    Virtual void ImpBottom() = 0;<br>    Virtual void ImpSetExtent(const Point&amp;) = 0;<br>    Virtual void ImpSetOrigin(const Point&amp;) = 0;<br>    Virtual void DeviceRect(Coord, Coord, Coord, Coord) = 0;<br>    Virtual void DeviceText(const char<em>, Coord, Coord) = 0;<br>    Virtual void DeviceBitmap(const char</em>, Coord, Coord) = 0;<br>Protected:<br>    WindowImp();<br>};</p>
+<p>VoidWindow::DrawRect(const Point&amp; p1, const Point&amp; p2)<br>{<br>    WindowImp* imp = GetWindowImp();<br>    Imp-&gt;DeviceRect(p1.x(), p1.Y(), p2.X(), p2.Y());<br>};</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/架构/架构/设计模式-抽象工厂/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Paul Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Paul Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/架构/架构/设计模式-抽象工厂/" itemprop="url">
+                  设计模式-抽象工厂
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 20:04:09" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:09+00:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-17 06:07:25" itemprop="dateModified" datetime="2020-05-17T06:07:25+00:00">2020-05-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/架构/" itemprop="url" rel="index"><span itemprop="name">架构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>目的</p>
+<p>提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Sample:</span><br><span class="line">Interface IComputerFactory&#123;</span><br><span class="line">    createMouse();</span><br><span class="line">    createOS();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Class Mouse&#123;&#125;;</span><br><span class="line"></span><br><span class="line">Class OS&#123;&#125;;</span><br><span class="line">//微软鼠标</span><br><span class="line">Class MicrosoftMouse extends Mouse&#123;&#125;;</span><br><span class="line"></span><br><span class="line">//苹果鼠标</span><br><span class="line">Class AppleMouse extends Mouse&#123;&#125;;</span><br><span class="line"></span><br><span class="line">//微软系统</span><br><span class="line">Class MicrosoftOS extends OS&#123;&#125;;</span><br><span class="line"></span><br><span class="line">//苹果系统</span><br><span class="line">Class AppleOS extends OS&#123;&#125;;</span><br><span class="line"></span><br><span class="line">Class MicrosoftFactory implements IComputerFactory&#123;</span><br><span class="line"></span><br><span class="line">    Mouse createMouse()&#123;</span><br><span class="line">        Return new MicrosoftMouse();//创建相应的鼠标品牌</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    OS createOS();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">ClassAppleFactory implementsI IComputerFactory&#123;</span><br><span class="line">    Mouse createMouse()&#123;</span><br><span class="line">        Return new AppleMouse();//创建相应的鼠标品牌</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    OS createOS();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Classclient&#123;</span><br><span class="line"></span><br><span class="line">    //具体工厂的抽象接口作为参数传入</span><br><span class="line">    createComputer(ComputerFactory factory)&#123;</span><br><span class="line">        //动态绑定到具体工厂,具体工厂生产相应的鼠标品牌</span><br><span class="line">        Mouse mouse = factory.createMouse();</span><br><span class="line">        OS os = factory.createOS();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Paul Jiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">212</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yufeng.info/" title="褚霸" target="_blank">褚霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://agentzh.org/" title="章亦春" target="_blank">章亦春</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://martinfowler.com/" title="Martin Fowler" target="_blank">Martin Fowler</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Paul Jiang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
